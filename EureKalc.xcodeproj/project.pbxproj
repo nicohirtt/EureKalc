@@ -1,0 +1,766 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 53;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AC01AFA329D8B4B900A22828 /* Latex.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC01AFA229D8B4B900A22828 /* Latex.swift */; };
+		AC0A045D2721B35F00EA21BC /* library.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC0A045C2721B35F00EA21BC /* library.txt */; };
+		AC16EAAD23CC6B270073FF88 /* GraphTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16EAAC23CC6B270073FF88 /* GraphTabControl.swift */; };
+		AC16EAAF23CC6CFA0073FF88 /* LayoutTabControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC16EAAE23CC6CFA0073FF88 /* LayoutTabControl.swift */; };
+		AC1B9B5F23C3A36A003ECEF0 /* Rules.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1B9B5E23C3A36A003ECEF0 /* Rules.swift */; };
+		AC33343A2555D25D008B518D /* PreferencesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3334392555D25D008B518D /* PreferencesController.swift */; };
+		AC478384230B059F00200C61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC478383230B059F00200C61 /* AppDelegate.swift */; };
+		AC478386230B059F00200C61 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC478385230B059F00200C61 /* MainController.swift */; };
+		AC478388230B059F00200C61 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC478387230B059F00200C61 /* Document.swift */; };
+		AC47838A230B05A000200C61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC478389230B05A000200C61 /* Assets.xcassets */; };
+		AC47838D230B05A000200C61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC47838B230B05A000200C61 /* Main.storyboard */; };
+		AC478399230B05A000200C61 /* EureKalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC478398230B05A000200C61 /* EureKalcTests.swift */; };
+		AC4783A4230B05A000200C61 /* EureKalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783A3230B05A000200C61 /* EureKalcUITests.swift */; };
+		AC4783BA230B05C700200C61 /* PhysValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B1230B05C700200C61 /* PhysValues.swift */; };
+		AC4783BB230B05C700200C61 /* UnitsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B2230B05C700200C61 /* UnitsManager.swift */; };
+		AC4783BC230B05C700200C61 /* HierarchicExp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B3230B05C700200C61 /* HierarchicExp.swift */; };
+		AC4783BE230B05C700200C61 /* Calculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B5230B05C700200C61 /* Calculator.swift */; };
+		AC4783BF230B05C700200C61 /* ScriptCoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B6230B05C700200C61 /* ScriptCoder.swift */; };
+		AC4783C0230B05C700200C61 /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B7230B05C700200C61 /* Statistics.swift */; };
+		AC4783C1230B05C700200C61 /* EquationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B8230B05C700200C61 /* EquationView.swift */; };
+		AC4783C2230B05C700200C61 /* Simulation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4783B9230B05C700200C61 /* Simulation.swift */; };
+		AC5FD0EC28E88DFE0067CA0B /* MatrixCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC5FD0EB28E88DFE0067CA0B /* MatrixCalc.swift */; };
+		AC6967C4242F8918003842CD /* SimTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6967C3242F8918003842CD /* SimTabController.swift */; };
+		AC70D7E1293F7F43003E4AB1 /* EditionField.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70D7E0293F7F43003E4AB1 /* EditionField.swift */; };
+		AC70DB5D23F0824C00ACB42A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC70DB5C23F0824C00ACB42A /* Localizable.strings */; };
+		AC7A5C04234125BB003252EC /* TabControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7A5C03234125BB003252EC /* TabControllers.swift */; };
+		AC7EA3FD2423CF150081A696 /* MathTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC7EA3FC2423CF150081A696 /* MathTabController.swift */; };
+		AC879F3D25CC754F00FAD1A1 /* units.txt in Resources */ = {isa = PBXBuildFile; fileRef = AC879F3C25CC754F00FAD1A1 /* units.txt */; };
+		ACA8A3D2259E2CE6007001DA /* ekTableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA8A3D1259E2CE6007001DA /* ekTableScrollView.swift */; };
+		ACB8CDA225C9BFDB00C8FF73 /* RulesPrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8CDA125C9BFDB00C8FF73 /* RulesPrefsController.swift */; };
+		ACB8CDAA25C9C09400C8FF73 /* LibraryPrefsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8CDA925C9C09400C8FF73 /* LibraryPrefsController.swift */; };
+		ACB8CDB225C9C18F00C8FF73 /* UnitsPrefsConroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB8CDB125C9C18F00C8FF73 /* UnitsPrefsConroller.swift */; };
+		ACCD0C4A2A6042DC006B4952 /* rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACCD0C492A6042DC006B4952 /* rules.txt */; };
+		ACCFD27028A2A6960059D848 /* SwiftStats.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCFD26F28A2A6960059D848 /* SwiftStats.swift */; };
+		ACD76D6B2A2B9A2D008C7615 /* functions.txt in Resources */ = {isa = PBXBuildFile; fileRef = ACD76D6A2A2B9A2D008C7615 /* functions.txt */; };
+		ACD959B9238C52A20087DD81 /* Grapher.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACD959B8238C52A20087DD81 /* Grapher.swift */; };
+		ACDFC886242E6C5400F7C855 /* ScriptWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDFC885242E6C5400F7C855 /* ScriptWindowController.swift */; };
+		ACE4B77E2943AF3A009C9347 /* myWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACE4B77D2943AF3A009C9347 /* myWindow.swift */; };
+		ACEA28F7251FBD1D00067164 /* VarsTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEA28F6251FBD1D00067164 /* VarsTabController.swift */; };
+		ACFE7F3327A2AC5A00E63424 /* help.rtf in Resources */ = {isa = PBXBuildFile; fileRef = ACFE7F3227A2AC5A00E63424 /* help.rtf */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AC478395230B05A000200C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC478378230B059F00200C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC47837F230B059F00200C61;
+			remoteInfo = EureKalc;
+		};
+		AC4783A0230B05A000200C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC478378230B059F00200C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AC47837F230B059F00200C61;
+			remoteInfo = EureKalc;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AC01513B25FD591700ABA887 /* EureKalcRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EureKalcRelease.entitlements; sourceTree = "<group>"; };
+		AC01AFA229D8B4B900A22828 /* Latex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Latex.swift; sourceTree = "<group>"; };
+		AC0A045C2721B35F00EA21BC /* library.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = library.txt; sourceTree = "<group>"; };
+		AC11AE0F2A1E5FA6000A356F /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Main.strings; sourceTree = "<group>"; };
+		AC16EAAC23CC6B270073FF88 /* GraphTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphTabControl.swift; sourceTree = "<group>"; };
+		AC16EAAE23CC6CFA0073FF88 /* LayoutTabControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutTabControl.swift; sourceTree = "<group>"; };
+		AC1B9B5E23C3A36A003ECEF0 /* Rules.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rules.swift; sourceTree = SOURCE_ROOT; };
+		AC3334392555D25D008B518D /* PreferencesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesController.swift; sourceTree = "<group>"; };
+		AC478380230B059F00200C61 /* EureKalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EureKalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC478383230B059F00200C61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AC478385230B059F00200C61 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		AC478387230B059F00200C61 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		AC478389230B05A000200C61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AC47838C230B05A000200C61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		AC47838E230B05A000200C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC47838F230B05A000200C61 /* EureKalc.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EureKalc.entitlements; sourceTree = "<group>"; };
+		AC478394230B05A000200C61 /* EureKalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EureKalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC478398230B05A000200C61 /* EureKalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EureKalcTests.swift; sourceTree = "<group>"; };
+		AC47839A230B05A000200C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC47839F230B05A000200C61 /* EureKalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EureKalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC4783A3230B05A000200C61 /* EureKalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EureKalcUITests.swift; sourceTree = "<group>"; };
+		AC4783A5230B05A000200C61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC4783B1230B05C700200C61 /* PhysValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhysValues.swift; sourceTree = "<group>"; };
+		AC4783B2230B05C700200C61 /* UnitsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsManager.swift; sourceTree = "<group>"; };
+		AC4783B3230B05C700200C61 /* HierarchicExp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HierarchicExp.swift; sourceTree = "<group>"; };
+		AC4783B5230B05C700200C61 /* Calculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Calculator.swift; sourceTree = "<group>"; };
+		AC4783B6230B05C700200C61 /* ScriptCoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptCoder.swift; sourceTree = "<group>"; };
+		AC4783B7230B05C700200C61 /* Statistics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
+		AC4783B8230B05C700200C61 /* EquationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquationView.swift; sourceTree = "<group>"; };
+		AC4783B9230B05C700200C61 /* Simulation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Simulation.swift; sourceTree = "<group>"; };
+		AC5FD0EB28E88DFE0067CA0B /* MatrixCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixCalc.swift; sourceTree = "<group>"; };
+		AC6967C3242F8918003842CD /* SimTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimTabController.swift; sourceTree = "<group>"; };
+		AC70D7E0293F7F43003E4AB1 /* EditionField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditionField.swift; sourceTree = "<group>"; };
+		AC70DB5C23F0824C00ACB42A /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		AC70DB6023F09A5700ACB42A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		AC7A5C03234125BB003252EC /* TabControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabControllers.swift; sourceTree = "<group>"; };
+		AC7EA3FC2423CF150081A696 /* MathTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathTabController.swift; sourceTree = "<group>"; };
+		AC879F3C25CC754F00FAD1A1 /* units.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = units.txt; sourceTree = "<group>"; };
+		ACA8A3D1259E2CE6007001DA /* ekTableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ekTableScrollView.swift; sourceTree = "<group>"; };
+		ACB8CDA125C9BFDB00C8FF73 /* RulesPrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesPrefsController.swift; sourceTree = "<group>"; };
+		ACB8CDA925C9C09400C8FF73 /* LibraryPrefsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryPrefsController.swift; sourceTree = "<group>"; };
+		ACB8CDB125C9C18F00C8FF73 /* UnitsPrefsConroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitsPrefsConroller.swift; sourceTree = "<group>"; };
+		ACCD0C492A6042DC006B4952 /* rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rules.txt; sourceTree = "<group>"; };
+		ACCFD26F28A2A6960059D848 /* SwiftStats.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftStats.swift; sourceTree = "<group>"; };
+		ACD76D6A2A2B9A2D008C7615 /* functions.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = functions.txt; sourceTree = "<group>"; };
+		ACD959B8238C52A20087DD81 /* Grapher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grapher.swift; sourceTree = "<group>"; };
+		ACDFC885242E6C5400F7C855 /* ScriptWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScriptWindowController.swift; sourceTree = "<group>"; };
+		ACE4B77D2943AF3A009C9347 /* myWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myWindow.swift; sourceTree = "<group>"; };
+		ACEA28F6251FBD1D00067164 /* VarsTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VarsTabController.swift; sourceTree = "<group>"; };
+		ACFE7F3227A2AC5A00E63424 /* help.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = help.rtf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AC47837D230B059F00200C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC478391230B05A000200C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC47839C230B05A000200C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4B021E668AFABBA8F48E7FA0 /* HappyCodingSupport */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HappyCodingSupport;
+			sourceTree = "<group>";
+		};
+		AC478377230B059F00200C61 = {
+			isa = PBXGroup;
+			children = (
+				AC478382230B059F00200C61 /* EureKalc */,
+				AC478397230B05A000200C61 /* EureKalcTests */,
+				AC4783A2230B05A000200C61 /* EureKalcUITests */,
+				AC478381230B059F00200C61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AC478381230B059F00200C61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC478380230B059F00200C61 /* EureKalc.app */,
+				AC478394230B05A000200C61 /* EureKalcTests.xctest */,
+				AC47839F230B05A000200C61 /* EureKalcUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC478382230B059F00200C61 /* EureKalc */ = {
+			isa = PBXGroup;
+			children = (
+				AC5FD0EB28E88DFE0067CA0B /* MatrixCalc.swift */,
+				ACE4B77D2943AF3A009C9347 /* myWindow.swift */,
+				AC01513B25FD591700ABA887 /* EureKalcRelease.entitlements */,
+				AC478383230B059F00200C61 /* AppDelegate.swift */,
+				AC478387230B059F00200C61 /* Document.swift */,
+				AC478385230B059F00200C61 /* MainController.swift */,
+				AC70D7E0293F7F43003E4AB1 /* EditionField.swift */,
+				AC3334392555D25D008B518D /* PreferencesController.swift */,
+				ACB8CDA125C9BFDB00C8FF73 /* RulesPrefsController.swift */,
+				ACB8CDA925C9C09400C8FF73 /* LibraryPrefsController.swift */,
+				ACB8CDB125C9C18F00C8FF73 /* UnitsPrefsConroller.swift */,
+				AC4783B8230B05C700200C61 /* EquationView.swift */,
+				AC01AFA229D8B4B900A22828 /* Latex.swift */,
+				AC7A5C03234125BB003252EC /* TabControllers.swift */,
+				AC16EAAE23CC6CFA0073FF88 /* LayoutTabControl.swift */,
+				AC7EA3FC2423CF150081A696 /* MathTabController.swift */,
+				AC16EAAC23CC6B270073FF88 /* GraphTabControl.swift */,
+				ACEA28F6251FBD1D00067164 /* VarsTabController.swift */,
+				AC6967C3242F8918003842CD /* SimTabController.swift */,
+				ACDFC885242E6C5400F7C855 /* ScriptWindowController.swift */,
+				AC4783B5230B05C700200C61 /* Calculator.swift */,
+				ACA8A3D1259E2CE6007001DA /* ekTableScrollView.swift */,
+				AC4783B1230B05C700200C61 /* PhysValues.swift */,
+				AC4783B3230B05C700200C61 /* HierarchicExp.swift */,
+				AC4783B6230B05C700200C61 /* ScriptCoder.swift */,
+				AC4783B2230B05C700200C61 /* UnitsManager.swift */,
+				AC4783B9230B05C700200C61 /* Simulation.swift */,
+				AC4783B7230B05C700200C61 /* Statistics.swift */,
+				ACCFD26F28A2A6960059D848 /* SwiftStats.swift */,
+				AC1B9B5E23C3A36A003ECEF0 /* Rules.swift */,
+				ACD959B8238C52A20087DD81 /* Grapher.swift */,
+				AC47838B230B05A000200C61 /* Main.storyboard */,
+				AC70DB5C23F0824C00ACB42A /* Localizable.strings */,
+				AC47838E230B05A000200C61 /* Info.plist */,
+				ACCD0C492A6042DC006B4952 /* rules.txt */,
+				AC0A045C2721B35F00EA21BC /* library.txt */,
+				AC879F3C25CC754F00FAD1A1 /* units.txt */,
+				ACD76D6A2A2B9A2D008C7615 /* functions.txt */,
+				AC47838F230B05A000200C61 /* EureKalc.entitlements */,
+				AC478389230B05A000200C61 /* Assets.xcassets */,
+				ACFE7F3227A2AC5A00E63424 /* help.rtf */,
+				4B021E668AFABBA8F48E7FA0 /* HappyCodingSupport */,
+			);
+			path = EureKalc;
+			sourceTree = "<group>";
+		};
+		AC478397230B05A000200C61 /* EureKalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				AC478398230B05A000200C61 /* EureKalcTests.swift */,
+				AC47839A230B05A000200C61 /* Info.plist */,
+			);
+			path = EureKalcTests;
+			sourceTree = "<group>";
+		};
+		AC4783A2230B05A000200C61 /* EureKalcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AC4783A3230B05A000200C61 /* EureKalcUITests.swift */,
+				AC4783A5230B05A000200C61 /* Info.plist */,
+			);
+			path = EureKalcUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AC47837F230B059F00200C61 /* EureKalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC4783A8230B05A000200C61 /* Build configuration list for PBXNativeTarget "EureKalc" */;
+			buildPhases = (
+				AC47837C230B059F00200C61 /* Sources */,
+				AC47837D230B059F00200C61 /* Frameworks */,
+				AC47837E230B059F00200C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EureKalc;
+			productName = EureKalc;
+			productReference = AC478380230B059F00200C61 /* EureKalc.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AC478393230B05A000200C61 /* EureKalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC4783AB230B05A000200C61 /* Build configuration list for PBXNativeTarget "EureKalcTests" */;
+			buildPhases = (
+				AC478390230B05A000200C61 /* Sources */,
+				AC478391230B05A000200C61 /* Frameworks */,
+				AC478392230B05A000200C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC478396230B05A000200C61 /* PBXTargetDependency */,
+			);
+			name = EureKalcTests;
+			productName = EureKalcTests;
+			productReference = AC478394230B05A000200C61 /* EureKalcTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AC47839E230B05A000200C61 /* EureKalcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AC4783AE230B05A000200C61 /* Build configuration list for PBXNativeTarget "EureKalcUITests" */;
+			buildPhases = (
+				AC47839B230B05A000200C61 /* Sources */,
+				AC47839C230B05A000200C61 /* Frameworks */,
+				AC47839D230B05A000200C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AC4783A1230B05A000200C61 /* PBXTargetDependency */,
+			);
+			name = EureKalcUITests;
+			productName = EureKalcUITests;
+			productReference = AC47839F230B05A000200C61 /* EureKalcUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AC478378230B059F00200C61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastSwiftUpdateCheck = 1030;
+				LastUpgradeCheck = 1430;
+				ORGANIZATIONNAME = "Nico Hirtt";
+				TargetAttributes = {
+					AC47837F230B059F00200C61 = {
+						CreatedOnToolsVersion = 10.3;
+					};
+					AC478393230B05A000200C61 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AC47837F230B059F00200C61;
+					};
+					AC47839E230B05A000200C61 = {
+						CreatedOnToolsVersion = 10.3;
+						TestTargetID = AC47837F230B059F00200C61;
+					};
+				};
+			};
+			buildConfigurationList = AC47837B230B059F00200C61 /* Build configuration list for PBXProject "EureKalc" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				fr,
+			);
+			mainGroup = AC478377230B059F00200C61;
+			productRefGroup = AC478381230B059F00200C61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AC47837F230B059F00200C61 /* EureKalc */,
+				AC478393230B05A000200C61 /* EureKalcTests */,
+				AC47839E230B05A000200C61 /* EureKalcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AC47837E230B059F00200C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC879F3D25CC754F00FAD1A1 /* units.txt in Resources */,
+				ACFE7F3327A2AC5A00E63424 /* help.rtf in Resources */,
+				ACCD0C4A2A6042DC006B4952 /* rules.txt in Resources */,
+				AC47838A230B05A000200C61 /* Assets.xcassets in Resources */,
+				ACD76D6B2A2B9A2D008C7615 /* functions.txt in Resources */,
+				AC70DB5D23F0824C00ACB42A /* Localizable.strings in Resources */,
+				AC47838D230B05A000200C61 /* Main.storyboard in Resources */,
+				AC0A045D2721B35F00EA21BC /* library.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC478392230B05A000200C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC47839D230B05A000200C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AC47837C230B059F00200C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACB8CDAA25C9C09400C8FF73 /* LibraryPrefsController.swift in Sources */,
+				AC70D7E1293F7F43003E4AB1 /* EditionField.swift in Sources */,
+				AC4783BF230B05C700200C61 /* ScriptCoder.swift in Sources */,
+				AC478386230B059F00200C61 /* MainController.swift in Sources */,
+				ACB8CDB225C9C18F00C8FF73 /* UnitsPrefsConroller.swift in Sources */,
+				AC4783C2230B05C700200C61 /* Simulation.swift in Sources */,
+				AC4783BB230B05C700200C61 /* UnitsManager.swift in Sources */,
+				ACE4B77E2943AF3A009C9347 /* myWindow.swift in Sources */,
+				AC478384230B059F00200C61 /* AppDelegate.swift in Sources */,
+				AC5FD0EC28E88DFE0067CA0B /* MatrixCalc.swift in Sources */,
+				AC16EAAD23CC6B270073FF88 /* GraphTabControl.swift in Sources */,
+				AC4783BC230B05C700200C61 /* HierarchicExp.swift in Sources */,
+				ACEA28F7251FBD1D00067164 /* VarsTabController.swift in Sources */,
+				AC16EAAF23CC6CFA0073FF88 /* LayoutTabControl.swift in Sources */,
+				AC7EA3FD2423CF150081A696 /* MathTabController.swift in Sources */,
+				AC4783BE230B05C700200C61 /* Calculator.swift in Sources */,
+				AC01AFA329D8B4B900A22828 /* Latex.swift in Sources */,
+				ACA8A3D2259E2CE6007001DA /* ekTableScrollView.swift in Sources */,
+				AC478388230B059F00200C61 /* Document.swift in Sources */,
+				ACD959B9238C52A20087DD81 /* Grapher.swift in Sources */,
+				ACDFC886242E6C5400F7C855 /* ScriptWindowController.swift in Sources */,
+				AC4783C0230B05C700200C61 /* Statistics.swift in Sources */,
+				AC7A5C04234125BB003252EC /* TabControllers.swift in Sources */,
+				AC4783C1230B05C700200C61 /* EquationView.swift in Sources */,
+				AC6967C4242F8918003842CD /* SimTabController.swift in Sources */,
+				AC4783BA230B05C700200C61 /* PhysValues.swift in Sources */,
+				ACB8CDA225C9BFDB00C8FF73 /* RulesPrefsController.swift in Sources */,
+				ACCFD27028A2A6960059D848 /* SwiftStats.swift in Sources */,
+				AC33343A2555D25D008B518D /* PreferencesController.swift in Sources */,
+				AC1B9B5F23C3A36A003ECEF0 /* Rules.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC478390230B05A000200C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC478399230B05A000200C61 /* EureKalcTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC47839B230B05A000200C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC4783A4230B05A000200C61 /* EureKalcUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AC478396230B05A000200C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC47837F230B059F00200C61 /* EureKalc */;
+			targetProxy = AC478395230B05A000200C61 /* PBXContainerItemProxy */;
+		};
+		AC4783A1230B05A000200C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AC47837F230B059F00200C61 /* EureKalc */;
+			targetProxy = AC4783A0230B05A000200C61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AC47838B230B05A000200C61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC47838C230B05A000200C61 /* Base */,
+				AC70DB6023F09A5700ACB42A /* en */,
+				AC11AE0F2A1E5FA6000A356F /* fr */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AC4783A6230B05A000200C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Nico Hirtt (QW3F7VL296)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AC4783A7230B05A000200C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development: Nico Hirtt (QW3F7VL296)";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AC4783A9230B05A000200C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EureKalc/EureKalc.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "3rd Party Mac Developer Application";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=macosx*]" = 86PH76S4E8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = EureKalc/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nicohirtt.EureKalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AC4783AA230B05A000200C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EureKalc/EureKalcRelease.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1.0;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 86PH76S4E8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = EureKalc/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = nicohirtt.EureKalc;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		AC4783AC230B05A000200C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 86PH76S4E8;
+				INFOPLIST_FILE = EureKalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nicohirtt.EureKalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EureKalc.app/Contents/MacOS/EureKalc";
+			};
+			name = Debug;
+		};
+		AC4783AD230B05A000200C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 86PH76S4E8;
+				INFOPLIST_FILE = EureKalcTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nicohirtt.EureKalcTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/EureKalc.app/Contents/MacOS/EureKalc";
+			};
+			name = Release;
+		};
+		AC4783AF230B05A000200C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 86PH76S4E8;
+				INFOPLIST_FILE = EureKalcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nicohirtt.EureKalcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EureKalc;
+			};
+			name = Debug;
+		};
+		AC4783B0230B05A000200C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
+				DEVELOPMENT_TEAM = 86PH76S4E8;
+				INFOPLIST_FILE = EureKalcUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = nicohirtt.EureKalcUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = EureKalc;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AC47837B230B059F00200C61 /* Build configuration list for PBXProject "EureKalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4783A6230B05A000200C61 /* Debug */,
+				AC4783A7230B05A000200C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC4783A8230B05A000200C61 /* Build configuration list for PBXNativeTarget "EureKalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4783A9230B05A000200C61 /* Debug */,
+				AC4783AA230B05A000200C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC4783AB230B05A000200C61 /* Build configuration list for PBXNativeTarget "EureKalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4783AC230B05A000200C61 /* Debug */,
+				AC4783AD230B05A000200C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AC4783AE230B05A000200C61 /* Build configuration list for PBXNativeTarget "EureKalcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AC4783AF230B05A000200C61 /* Debug */,
+				AC4783B0230B05A000200C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AC478378230B059F00200C61 /* Project object */;
+}

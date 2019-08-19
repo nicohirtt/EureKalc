@@ -1,0 +1,881 @@
+#USING THIS HELP
+Search the Help
+	Select a subject or type some text in the combo box and press RETURN. This will display all items whose title contains that text
+Syntax of function definitions
+	Arguments of functions may be named or unnamed. In this Help, unnamed arguments are represented by a '_' (underscore). The type of each argument is given under de function definition. 'double' means a scalar double precision number (possibly with some physical unit) while 'doubles' means a collection of double number. Argument names between square brackets are optional ; some of them have a default value given after the type. 
+Writing functions and argument names
+	When you write a function, you write its arguments in the form 'arg_name = expression'. Argument names may be shortened if there is no risk of confusion. You may omit argument names if you respect exactly their order in the function definition.
+Use the manual
+	This help is mainly intended as a reminder for function names and syntax. You should look at the full manual for more explanations and examples.
+
+#TYPES OF EXPRESSIONS
+Expression ?
+	Working with EureKalc means essentially typing expressions at the insertion point, each of them followed by, <Return>, <Tab> or <Enter> (or <escape>). Each expression is deciphered, eventually calculated and re-written in a neat form.
+
+Direct calculation
+	Any calculation containing numbers, physical quantities, sequences, operators, variables, functions... If the calculation produces a result (if the variables and functions have been defined) it is written behind an arrow, after the expression. You may choose to hide the result of an expression by checking 'hide result' in the sidebar. Example : sqrt(sin(π/4))
+
+Equation
+	Two expressions separated by a “ = ” constitute an equation. EureKalc lets you memorise, copy and transform those equations. Example : p*V=N*k*T
+Variable definition
+	When the left-hand side of an equation is a variable, EureKalc tries to calculate the right-hand side. If a result is found, it is memorised as the value of that variable. The right-hand side expression itself is memorised as the symbolic definition of the variable : this definition can then be used later in other expressions. Example : a=2[cm/s]/0.3[s]
+Function definition
+	A function definition is an equation whose first member is a function name followed by a list of variables between parentheses. The function definition is memorised and may be used in calculations. Example : x(t)=2[cm]*sin(\w*t)
+Command
+	For instance the plot() and histo() commands to draw graphs, the print() command to print results to the console, the use() command to import data from the library,or  the user-interface commands, like button(), label(), slider(), image(), text(), etc…
+Control structure
+	They are mainly used in scripts : IF..THEN..ELSE, FOR..NEXT, WHILE..LOOP, FUNCTION...RETURN..END
+
+#DATA TYPES
+Scalar types
+	integer, double (double precision decimal number ; may have physical units), string, boolean (true or false), color, expression, variable
+Sequences and vectors
+	A sequence or vector is a 1-Dimensional collection of data, all of the same type (and same unit if doubles) : integers, doubles, strings, bools, colors
+Matrices and hyper-matrices
+	Contain 2-dimensional or n-dimensional organised data, all of the same type and unit (numbers, colors, bools, strings…). Actually, a sequence or vector is a 1-D hypermatrix.
+Fields
+	A field associates a scalar number (scalar field) or a vector (vector field) to each point of a 1, 2 or 3-D regular grid of points in a coordinate system.
+Lists
+	 A 1-dimensional collection of elements of different types and/or units : Example : (1.56[m], 45[s], ‘alpha’, true, a=b+c, z)
+Dataframes
+	 An ordered collection of sequences (columns) all containing the same number of elements (number of rows). Rows and columns may have names. Dataframes are usually visualised as tables
+
+#SYNTAX RULES
+
+
+#ELEMENTARY MATH
+Math operators
+	+ , - , * , / , ^ , % (reminder of integer division) , // (division operator with priority above multiplication)
+abs
+	Absolute value
+	doubles
+sqrt
+	Square root
+	doubles
+int
+	Integer part of decimal number
+	doubles
+round
+	Nearest integer
+	doubles
+sin
+	Sine function
+	doubles
+cos
+	Cosine function
+	doubles
+tan
+	Tangent function
+	doubles
+cot
+	Cotangent function
+	doubles
+asin
+	Inverse sine function
+	doubles
+acos
+	Inverse cosine function
+	doubles
+atan
+	Inverse tangent function
+	doubles
+acot
+	Inverse cotangent function
+	doubles
+sinh
+	Hyperbolic sine function
+	doubles
+cosh
+	Hyperbolic cosine function
+	doubles
+tanh
+	Hyperbolic tangent function
+	doubles
+coth
+	Hyperbolic cotangent function
+	doubles
+ln
+	Natural logarithm
+	doubles
+Log
+	Decimal logarithm
+	doubles
+log
+	Logarithm of 'x' in base 'a' (a>0)
+	a: doubles
+	x: doubles
+exp
+	Exponential function
+	doubles
+random, rnd
+	Random double number between 0 and x
+	[x]: double=1
+	
+
+#STRINGS
+string
+	Returns a string representing the numeric or boolean value(s)
+	numbers or bools
+left
+	Substring of 'n' characters, omitting the 'drop' firsts
+	string: string
+	n: int
+	[drop]: int=0
+right
+	Substring of 'n' characters from the right, omitting the 'drop' last
+	string: string
+	n: int
+	[drop]: int=0
+position
+	Index (starting at 0) of the first occurence of 'substring' in 'string' (or -1 if not found)
+	substring: string
+	string: string
+alpha
+	String or sequence of strings with the n-th letters of alphabet (uppercase if upper is TRUE)
+	n: ints (1 ≤ n ≤ 26)
+	[upper]: bool=TRUE
+unicode
+	String (or strings if 'single' = FALSE) with the unicode characters given by the integers 'n'
+	n: ints (32 ≤ n ≤ 255)
+	[single]: bool=FALSE
+unicode
+	Returns the corresponding sequence of unicode values
+	string: string
+
+
+#BOOLEANS and comparison operators
+true, TRUE
+	Boolean 'true' constant
+false, FALSE
+	Boolean 'false' constant
+OR,+
+	Logical 'or' operator
+AND,*
+	Logical 'and' operator
+NOT, -
+	Logical 'not' function
+	bools
+bool
+	Returns TRUE if the number is > 0
+	doubles
+==, ≠, <, >, ≤, ≥
+	Comparison operators. May operate on scalars and/or collections
+
+
+#SEQUENCES AND VECTORS (creating...)
+(item1,item2,item3,...)
+	Simple sequence of items (use ';' if ',' is the decimal separator). All items must have same type and same unit.
+a : b [:c]
+	Arithmetic progression from a to b (with step c)
+repeat
+	Returns a sequence containing 'n' times the same item 'x'
+	n: int
+	x: scalar
+sequence
+	Arithmetic or geometric progression from 'min' to 'max' with 'n' constant steps 'step' or multiplications by 'mult'
+	[min]: double
+	[max]: double
+	[step]: double
+	[mult]: double
+	[n]: int
+sequence
+	Expression is calculated with 'var' taking all values of 'indexes'. Var is a local variable
+	exp: expression containing variable var
+	var: variable
+	indexes: integers
+
+rnd
+	n random decimal numbers between 0 and x or integers between 1 and x (if x is integer and integer = true)
+	[x]: double = 1
+	[n]: int = 1
+	[integer]: bool = false
+uniformdis
+	n random values following a uniform distribution between min and max
+	n: int
+	[min]: double=0
+	[max]: double=1
+normaldis
+	Normal distribution of n random values with given mean and standard deviation (sd). If min and or max are given, only values between min and max are returned.
+	n: int
+	[mean]: double = 0
+	[sd]: double = 1
+	[min]: double = -∞
+	[max]: double = +∞
+lognormaldis
+	Lognormal distribution of n random values with given mean and standard deviation (sd)
+	n: int
+	[mean]: double = 0
+	[sd]: double = 1
+boltzmann, maxwell
+	Boltzmann-Maxwell distribution of n values, specified by the mean or by the a value (= mean.sqrt(π/8)) or by the particles mass m and their temperature T, which gives a velocity distribution
+	n: integer,
+	[mean]: double
+	[a]: double = 1
+	[m]: double in g, kg, etc.
+	[T]: double in Kelvin, °C, etc.
+
+#SEQUENCES (working with...)
+count
+	The number of values in 'x' or the number of values equal to 'test'
+	x: sequence
+	[test]: any scalar
+x#index
+	Returns the item number 'index' of sequence 'x' (indexes start at zero)
+x{indexes}
+	Returns a subsequence containing the elements of x with given indexes
+x{bools}
+	Bools must have the same length as x. Returns a sub-sequence of x corresponding to the TRUE booleans
+x#index = expression
+	Replaces item 'index' of sequence 'x' with the result of 'expression'
+x{indexes} = expression
+	Replaces the selected items of sequence 'x' with the results of 'expression'
+x{bools} = expression
+	Replaces the selected items of sequence 'x' with the result of 'expression'
+last, first
+	Returns the n last or first items of sequence x. If n<0, omits the n first or last.
+	x: sequence
+	[n]: integer = 1
+
+sorted, sort
+	Returns a sequence with the items of 'x' sorted ascending or descending
+	x: doubles
+	[descending]: bool = false
+reversed, reverse
+	Returns the items of 'x' in reversed order
+	x: sequence
+rotate
+	Returns the items shifted dx places to the right (if n>0) or to the left (if n<0)
+	x: sequence
+	[n]: integer = 1
+limited
+	Returns a collection of values similar to x, but reduced within limits min & max (asymptotically if 'smoothed' = TRUE)
+	x: doubles
+	min: double
+	max: double
+	[smooth]: bool = TRUE
+makeindex
+	Transforms the values of x into an index between min and max. Slope is ∆index/∆x at the center (= central value chosen for x)
+	x: doubles
+	min: double
+	max: double
+	[slope]: double = 1.0
+	[center]: double = 0.0
+
+#VECTORS
+norm
+	Norm of a vector x : sqrt(sum(x^2))
+	x: doubles
+x•y
+	Scalar product (or dot product) of two vectors
+x**y
+	Vector product (or cross product) of two vectors
+x***y
+	Outer product of two vectors : returns a 2D matrix
+
+
+#DATAFRAMES
+dataframe
+	Creates a dataframe. Each 'data' sequence is a column of the dataframe. All 'data' sequences must have the same length. If the first 'data' is a dataframe, the other sequences will be appended to it. 'columns' and 'rows' are the column names and row names. 'columns' defaults to the expression defining the column. 'rows' defaults to a string containing the row number.
+	data: sequence or dataframe
+	[data]: sequence
+	[data]: sequence
+	...
+	[columns]: strings
+	[rows]: strings
+
+colnames
+	Returns the column names of a dataframe
+	df: dataframe
+
+rownames
+	Returns the row names of a dataframe
+	df: dataframe
+
+export
+	Export a dataframe, matrix or sequence, contained in a variable 'var', as a .csv or .tsv file. 'sep' is the item separator (defaults to TAB). 'dec' is the decimal separator (defaults to the user settings). 
+	var: variable
+	[sep]: string = "\t"
+	[dec]: string
+
+import
+	Imports a dataframe, matrix or sequence from a .csv or .tsv file. 'sep' is the item separator (defaults to TAB) into a variable 'var'. 'dec' is the decimal separator (defaults to the user settings). If 'type' is 'd' tries to import a dataframe. If type is 'a' tries to determine automatically if it is a dataframe, matrix or sequence. It 'type' is anything else, imports a matrix or a sequence. 'sep' is the item separator (defaults to TAB). 'dec' is the decimal separator (defaults to the user settings). 
+	var: variable
+	[sep]: string = "\t"
+	[dec]: string
+	[type]: string = "a"
+
+
+#STATISTICS (descriptive stats)
+count
+	Number of items in sequence x
+	x: sequence)
+sum
+	Sum of the items in x
+	x: doubles
+prod
+	Product of the items in x
+	x: doubles
+mean
+	Mean value of the items in x
+	x: doubles
+median
+	Median value of the items in x
+	x: doubles
+variance, var
+	Variance of the items in x
+	x: doubles
+min
+	Smallest value in x
+	x: doubles
+max
+	Highest value in x
+	x: doubles
+sd, std, stdev
+	Standard deviation of the items in x
+	x: doubles
+norm
+	Norm of a vector x : sqrt(sum(x^2))
+	x: doubles
+covariance, com
+	Covariance of sequences x and y
+	x: doubles
+	y: doubles (same count as x)
+rsquare,  r2
+	Coefficient of determination of x and y
+	x: doubles
+	y: doubles (same count as x)
+correlation, corr
+	Pearsons linear correlation coefficient
+	x: doubles
+	y: doubles (same count as x)
+
+sum
+	Sum of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+mean
+	Mean of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+median
+	Median of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+variance
+	Variance of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+sd
+	Standard deviation of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+min
+	Minimum of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+max
+	Maximum of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+norm
+	Norm of the results of 'exp' when 'var' takes all values of 'indexes'
+	exp: expression
+	var: variable
+	indexes: integers
+
+#PROBABILITIES AND DISTRIBUTIONS
+randombool
+	Sequence of n booleans with probability 'prob' to be TRUE
+	[n]: integer=1
+	[prob]: double = 0.5  (0 ≤ prob ≤ 1)
+randombool
+	Sequence of booleans with probabilities 'prob' to be TRUE (the number of booleans returned will be equal to the number of probabilities in prob)
+	prob: doubles (argument name 'prob' is compulsory in this usage)
+choose
+	Chooses n random integers between 0 and count(prob)-1, with the given (relative) probabilities for each choice.
+	prob: doubles
+	[n]: integer = 1
+rnd
+	n random decimal numbers between 0 and 1 (x=1) or integers between 1 and x (x>1)
+	x: int
+	n: int
+uniformdis
+	n random values following a uniform distribution between min and max
+	n: int
+	[min]: double=0
+	[max]: double=1
+normaldis
+	Normal distribution of n random values with given mean and standard deviation (sd). If min and or max are given, only values between min and max are returned.
+	n: int
+	[mean]: double = 0
+	[sd]: double = 1
+	[min]: double = -∞
+	[max]: double = +∞
+lognormaldis
+	Lognormal distribution of n random values with given mean and standard deviation (sd)
+	n: int
+	[mean]: double = 0
+	[sd]: double = 1
+boltzmann, maxwell
+	Boltzmann-Maxwell distribution of n values, specified by the mean or by the a value (= mean.sqrt(π/8)) or by the particles mass m and their temperature T, which gives a velocity distribution
+	n: integer,
+	[mean]: double
+	[a]: double = 1
+	[m]: double in g, kg, etc.
+	[T]: double in Kelvin, °C, etc.
+
+
+#STATISTICS (classes and categories)
+classes
+	Returns the n+1 limits of the subdivision of x in n uniform classes (of equal width) within [min, max]. If centers = TRUE, returns the n central values of the classes
+	x: doubles
+	n: integer
+	[min]: double
+	[max]: double
+	[centers]: bool = FALSE
+classes
+	Returns the possible discrete values of x (unsorted)
+	x: collection of discrete values
+quantiles
+	Returns the n+1 limits of the n quantile classes of x (if all = FALSE, omits the first and last value = min and max of the collection. If centers = TRUE, returns the central values of the classes). weights is an optional sequence of the same length as x for weighted statistics.
+	x: doubles
+	[n]: integer = 4
+	[all]: bool = TRUE
+	[centers]: bool = FALSE
+	[weights]: doubles
+classify
+	Returns a collection of the same length as x, giving, for each element of x, the number (or the name) of it’s category within classes defined by their limits or within q quantiles of x (possibly calculated with the given weights) or n uniform classes (within the limits min and max if given).
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[n]: integer
+	[min]: double
+	[max]: double
+	[q]: integer
+	[weights]: doubles
+	[names]: strings
+freq
+	Frequencies of each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+freq
+	Frequencies of each (or some) discrete values of 'x'
+	x: collection of discrete values
+	[in]: collection (a selection of those values)
+
+rfreq
+	Relative frequencies of each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+sums
+	Sums of x-values for each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+means
+	Means of x-values for each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+sds, stds, stdevs
+	Standard deviations of x-values for each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+vars
+	Variances of x-values for each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+densities
+	Densities of x-values for each (or some) class(es) (given either by it's limits or by a discrete value in sequence 'by') 
+	x: doubles
+	[limits]: doubles (some class limits as given by classes( ) or quantiles(… all=TRUE)
+	[by]: collection (same length as x and defines the class of each element of x)
+	[in]: collection (a selection of the classes)
+	[weights]: doubles
+
+density
+	Density distribution of x in n uniform classes (between min and max). Equivalent to dens(x,classes(x,n,[min],[max]))
+	x: doubles
+	n: integer
+	[min]: double
+	[max]: double
+
+
+#MATRICES
+hyper-matrices
+	In this help, the word 'matrix' may designate a 2D-matrix or any n-dimensional hyper-matrix.
+matrix
+	Creates a matrix with dimensions 'dim', filled with 'data' of values of function 'f' at indexes i, j, k, l...
+	dim: integers
+	[data]: any values = 0
+	[f]: function of i,j,k,l…
+x***y
+	Outer product of two numeric vectors or matrices : returns a 2D matrix containing all the products of couples of elements from x and y.
+outer
+	similarly to the outer product, this function calculates the result of the expression f  for all couples of values taken in the matrices x and y and produces a (n+m)-Dimensional matrix.
+	x: matrix
+	y: matrix
+	f : exp of x and y
+slice
+	Extracts an (n-1) dimensional slice from a n-dim matrix. dim is 0 for columns, 1 for rows, etc… Index is the value of that dimension to extract.
+	x: matrix
+	dim: integer
+	index: integer
+submatrix, submat
+	Returns a sub-matrix of x, with the elements specified by 'coordslist': a list containing one index or a sequence of indexes for each dimension of x (or -1 for 'all values').
+	x: matrix
+	coordslist: list
+transpose
+	If x is a 2-D matrix and perm is omitted, this returns the transpose of x, produced by exchanging columns and rows. Extended to n-dim matrices and custom permutations of axes given by the 'perm' sequence. For instance perm (0,2,1) will exchange second and third dimensions.
+	x: matrix
+	[perm]: integers = (1, 2, 3, n-dims, … 0) )
+mprod
+	matrix multiplication of 2-D matrices. Number of columns in x must be equal to number of rows in y
+	x: 2D-matrix
+	y: 2D-matrix
+det, determinant
+	Returns the determinant of the square matrix x
+	x: 2D-square matrix of doubles
+shift, shifted
+	Returns a matrix with elements shifted following the values of d in each corresponding dimension
+	x: matrix
+	d: integers
+
+#FIELDS
+field
+	Numeric representation of a scalar or vectorial field with given 'size' (usually in space units) and scalar or vectorial values given by expression f. dx is the resolution (distance between two calculated points). The location of the field may be given by the coordinates of its 'center' or its 'origin' (point with smallest coordinates).
+	f: expression (function of x, y, z)
+	size: doubles (should be multiples of dx)
+	dx: double (similar unit as size)
+	[center]: doubles = (0,0,...) (similar unit as size)
+	[origin]: doubles (similar unit as size)
+matrixfield
+	Creates a field with data from a (hyper)matrix. If vector=0 it's a scalar field.
+	matrix: (hyper)matrix
+	dx: double
+	[origin]: doubles
+	[vector]: integer = 0
+gridfield
+	Creates a scalar field with data from a population 'pop' with a grid-setting (see "models and simulations"). If var is omitted, the field represents the number of individuals (objects, events…) in each cell of the grid (or it’s density if calc = “density” or “d”). Otherwise it's the mean (or the sum if calc = 'sum') of the variable in each cell. (Future versions will accept "sd", "var", "dens", "min", "max", "median"... values for 'calc').
+	pop: string
+	[var]: string
+	[calc]: string = "mean"
+fieldval
+	Returns the value(s) of a field for the points given by the vectors 'at'. If extrapolate is FALSE (=default), returns the nearest existing value in field. If TRUE, the result is extrapolated from the surrounding values (his is much slower).
+	field: field
+	at: vector [,vector…]
+	[extrapolate]: bool = FALSE
+fieldval
+	Same as above, but points are given by separate sequences for x, y and z-coordinates. Useful when working with models (simulations), where the positions of individuals are stored in the x, y, z population variables
+	field: field
+	x: doubles
+	[y]: doubles
+	[z]: doubles
+	[extrapolate]: bool = FALSE
+fieldorigin
+	Coordinates of the origin of a field
+	_: field
+fieldcenter
+	Coordinates of the center of a field
+	_: field
+fieldcell
+	Distance (dx) between two adjacent points of a field
+	_: field
+fieldvector
+	Returns 0 for a scalar field or the vector-dimension for a vectorial field
+	_: field
+fieldinfo
+	Returns all previous info in a list.
+	_: field
+doublefield
+	Returns a copy of the field with a resolution doubled n times by extrapolation. 
+	field: field
+	[n]: integer=1
+reducefield
+	Returns a copy of the field with a resolution reduced n times (= the reciprocal of doublefield). 
+	field: field
+	[n]: integer=1
+div
+	Divergence of a vector field (returns a scalar field)
+	x: field
+grad
+	Gradiant of a scalar field (returns a vector field)
+	x: field
+#GRAPHICS
+plot
+	Plots a graph with x and y data
+	x: doubles
+	y: doubles
+	[xmin]: double
+	[xmax]: double
+	[ymin]: double
+	[ymax]: double
+	[autox]: bool (forces automatic calculation of x-axis)
+	[autoy]: bool (forces automatic calculation of y-axis)
+	[linetype]: integer  (0 = continuous, 1 = dotted, 2 = dashed, 3 = dot-dash)
+	[dottype]: integer (0 = ○, 1 = □ , 2 = △ , 3 = ▽ , 4 = + , 5 = x , 6 = • , 7 = ■ ,  8 = ▲ , 9 = ▼ , 10 = ◆)
+	[dotinterval]: integer (number of omitted points per dot)
+	[linewidth]: double(s)  (in points - Single value or sequence same length as x and y)
+	[linecolor]: color(s) (Single value or sequence).
+	[dotsize]: double(s) (in points - Single value or sequence). 	[dotcolor]: color(s) (Single value or sequence)
+	[xerror]: doubles (Error bars for x - same length and units as x)
+	[yerror]: doubles (Error bars for y - same length and units as y)
+	[name]: string   (Name used for the legend)
+plot
+	Displays a field
+	field: field
+	[fcolor]: (color, color) (colors for min and max values)
+	[fminmax]: (double, double) (min and max values)
+plot( x , y , field , ...)
+	Combines x,y plot and field-plot ('field' argument name is compulsory)
+
+plot( $(...) , $(...) , $(...), ...)
+	Displays multiple plots on the same graph. Each '$(...)' is a set of arguments defining a single x-y plot or field-plot (see above)
+plot
+	Displays multiple x-y plots sharing the same x-sequence.
+	x: doubles
+	y: doubles
+	[y]: doubles
+	[y]: doubles
+	...: etc...
+histogram, histo
+	Draws a "stairs" histogram. Sequence y must have one more element than sequence x
+	x: doubles
+	y: doubles
+	[...]: some of the optional arguments of the first 'plot' syntax
+barplot
+	Draws the data using vertical or horizontal bars. If data is a matrix, then each row is a series of bars (same colour), corresponding to a name in names and each column is a group of bars corresponding to a given label.
+	data: doubles or 2-D matrix
+	[labels]: strings (name of each item or each column if matrix)
+	[type]: string = ‘V’ ('V'ertical or 'H'orizontal bars)
+	[stacked]: bool = FALSE (stack the rows of matrix-data)
+	[colspace]: double = 0 (space between bars as fraction of the bar width)
+	[space]: double = 0.7 (space between between groups of bars)
+	[names]: strings (name of each row in a matrix)
+
+#COLOURS
+colour, color
+	Returns a colour with the specified red, green, blue and alpha components (0 ≤ values ≤ 1)
+	[r]: double=0.5
+	[g]: double=0.5
+	[b]: double=0.5
+	[a]: double=1.0
+colour color
+	Returns a colour given by it’s name : “blue” or “b”, “red” or “r”, “orange” or “o”, “brown“, “green” or “g”, “yellow” or “y”, “gray” or “grey”, “pink”, “teal”, “indigo”, “purple”, “black”, “white”
+	[name]: string = “white”
+	[a]: double=1.0 (alpha layer ∈ [0,1])
+grey, gray
+	Returns a grey level for each value of 'level'
+	[level]: doubles = 0.5 (∈ [0,1])
+	[a]: double = 1.0 (alpha layer ∈ [0,1])
+colours, colors
+	Transforms a collection of numbers into a collection of colours with start colour corresponding to the min value and end colour to the max. If min and/or max are omitted, the min or max values of the x-collection are used.
+	x: doubles
+	[start]: color = color('red')
+	[end]: color = color('blue')
+	[min]: double
+	[max]: double
+colours, colors
+	Transforms a collection of bools into a collection of colors 
+	x: bools
+	[col1]: color = color('red')
+	[col2]: color = color('blue')
+
+#DERIVATIVES AND INTEGRALS
+derivative, deriv
+	If 'at' is given, estimates the numeric value of the derivative df/dx for x=at, with precision 'dx'. Otherwise this returns nothing but can be used for further symbolic calculations.
+	f: expression or name of an existing function of variable x
+	x: variable
+	[at]: double
+	[dx]: double = 0.000001 (in the units of 'at')
+integral, integ
+	If 'from' and 'to' are given, estimates the definite integral ∫f.dx, between the given limits, using 'n' steps. Otherwise this returns nothing but can be used for further symbolic calculations.
+	f: expression or name of an existing function of variable x
+	x: variable
+	[from]: double
+	[to]: double
+	[n]: integer = 1000
+
+# SCRIPTING
+RUN, Run, run
+	Runs the script
+	_: string (name of a script)
+page
+	Shows a page and executes all it's calculations once again
+	page: string or integer (name or number of the page)
+	[recalc]: bool = TRUE
+
+print
+	Prints the results of the arguments to the console
+	_: expression
+	[...]: any number of arguments
+break
+	stops execution of a script
+
+IF, If, if( bool, exp_if_true , exp_if_false )
+	Single line version of the alternative structure.
+
+IF(bool) .... [ELSE ....] ENDIF
+	Multiline form of the alternative structure. '....' stands for any number of script lines. All keyword may be written in uppercase (IF), lowercase (if) or capitalised (If).
+FOR, For, for( variable, sequence , expression )
+	Single line version of the FOR-NEXT repeat structure. 'expression' is repeated with each value of the 'variable' in 'sequence' 
+
+FOR( variable , sequence ) .... NEXT
+	Multiline form of the FOR-NEXT repeat structure. '....' stands for any number of script lines. All keyword may be written in uppercase (FOR), lowercase (for) or capitalised (For).
+
+WHILE, While, while( bool , expression )
+	Single line form of the WHILE repeat structure.
+
+WHILE( bool ) .... LOOP
+	Multiline form of the WHILE repeat structure. '....' stands for any number of script lines. All keyword may be written in uppercase (WHILE), lowercase (while) or capitalised (While).
+FUNCTION( name(var1,var,var3...) ) .... [ .... RETURN( expression ) ] ... RETURN( expression ) END
+	Multiline function definition. '....' stands for any number of script lines. All keyword may be written in uppercase (END), lowercase (end) or capitalised (End).
+DO( expression, expression, expression )
+	Executes all expressions. If an expression is (or result to) a string, EureKalc tries to find a script or an existing expression or grid on a page with that name and executes it.
+local( var , var , var...)
+	Defines a script variable as local (must appear in the script before you use that variable).
+
+# TIMER, DYNAMIC MODELS, SIMULATIONS
+timer.t, sim.t, world.t, t()
+	Return the simulated time
+timer.loop, sim.loop, world.loop
+	Return the number of executed loops
+timer.dt, sim.dt, world.dt
+	Return the simulated time interval of the timer.
+world.dim, sim.dim
+	An integer giving the number of dimensions of the world
+world.min, sim.min, world.max, sim.max
+	Positions of the world-borders
+simtimer
+	Changes programmatically the value of the timer interval dr
+	timerinterval: double
+population
+	Creates (or initialises, if already existing) a population pop of n members. All variables, including the auto-mechanics variables, are initialised as sequences of n zero values. Exception for the .x, .y and .z variables if they exist and if a field is given : the field is used as the (relative) probability of having a member at that location (anywhere in the corresponding cell). field should have the same dimensions as the simulated world.
+	pop: string
+	n: integer
+	[field]: scalar field
+
+populate
+	Does the same as population(…) but adds new members to an existing population instead of restarting from zero. The default values for the variables are the values of the first member
+	pop: string
+	n: integer
+	[field]: scalar field]
+remove
+	Removes the members (given by their number) from the population pop.
+	pop: string
+	members: integers
+gridsize
+	Returns the size of the grid.
+	pop: string (= name of a population)
+neighbours
+	Coords are the x,y,z coordinates of a point. The function returns the list (id-numbers = integers) of the members of population pop (may be omitted is single population) who are in the same cell as that point (dis = 0) or at 1 cell-distance (dis = 1 = default), 2 cells-distance, etc…
+	coord: doubles
+	[pop]: string
+	[dis]: integer = 1
+gridcell
+	coords indexes (i,j,k) of a gridcell given by it's number in the grid-matrix.
+	pop: string
+	index: integer
+gridfield
+	Creates a scalar field with data from a population 'pop' with a grid-setting (see "models and simulations"). If var is omitted, the field represents the number of individuals (objects, events…) in each cell of the grid  (or it’s density if calc = “density” or “d”). Otherwise it"s the mean (or the sum if calc = 'sum') of the variable in each cell. (Future versions will accept "sd", "var", "dens", "min", "max", "median"... values for 'calc').
+	pop: string
+	[calc]: string = "mean"
+	[var]: string = “count”
+	[reset]: bool = FALSE
+(population).grid
+	returns the indexes of the grid cells containing each member of the population 
+#USER INTERFACE
+label
+	Displays the expression as a text (without inverted commas). Any expression beginning with a space will also be considered as a label (and the leading space will be removed)
+	_: expression
+text
+	Display a text box with the given expression as text
+	_: expression
+button
+	Creates a clickable button with the given label. If script is a string, clicking the button will try to run a script or an expression with that name. Otherwise, the script expression is executed when the button is clicked
+	script: expression
+	[label]: string
+checkbox
+	Displays a checkbox that will set the value of var to boolean TRUE or FALSE. If label is omitted, the name of the variable is used as default. If 'script' is given, the checkbox will execute the expression (or the script / named expression if it’s a string).
+	var: variable
+	[label]: string
+	[script]: expression
+menu
+	Displays a pull down menu that sets the value of variable var. The items of the menu are the string values of items. If script is given, the menu will execute the expression (or the script / named expression if it’s a string) after changing the value of the variable. If index is TRUE, the var will contain the integer index of the selected item. Otherwise (default) it receives the string value.
+	var: variable
+	[items]: strings = ""
+	[script]: expression
+	[index]: bool = FALSE
+input
+	Displays a label and an editable input-field (if no label is given, the name of the variable is used). When the user enters a value in the field, this becomes the value of variable. If value is specified, this will be the initial value of the variable. If value has a unit, this will be the unit for all future inputs. If script is given, changing the content of the input will execute the expression (or the script / named expression if it’s a string) after changing the value of the variable.
+	var: variable
+	[value]: scalar
+	[script]: expression
+	[label]: string
+slider, hslider
+	Displays a horizontal slider to set the value of 'var'. min  and max are the minimum and maximum values. If 'ticks' is given, the slider may only take ticks + 1 discrete values between min and max. If 'step' is given, the possible discrete values will increment by step from min to max. This will override any setting of ticks. If neither ticks nor step is given, the slider is continuous. If script is given, changing the slider position will execute the expression (or the script / named expression if it’s a string) after changing the value of the variable. If 'label' is given, it is written near the slider. Otherwise the name of the variable is used as default label. If value is TRUE, the value of the slider is shown near the slider.
+	var: variable
+	[min]: double = 0.0
+	[max]: double = 1.0
+	[ticks]: integer
+	[step]: double
+	[script]: expression
+	[label]: string
+	[value]: bool = TRUE
+	[continuous]: bool == FALSE
+
+vslider
+	Displays a vertical slider ; same arguments as slider(…)
+cslider
+	Displays a circular slider ; same arguments as slider(…)
+
+stepper
+	Displays a stepper that lets the user select the numeric value of variable var. Same arguments as 'slider( )' except 'ticks'
+	var: variable
+	[min]: double = 0
+	[max]: double = 100
+	[step]: double = 1
+	[script]]: expression
+	[label]: string
+	[value]: bool = TRUE
+
+image, imagebox
+	This function, without argument, creates an empty, resizable image box, where you can paste or drag an image.
+
+table
+	Displays the given data in a scrollable and resizable table. Each sequence will be one column of the table. All sequences must have the same length
+	_: sequence
+	[_]: sequence
+	[_]: sequence
+	[...]
+table
+	Displays the given dataframe in a scrollable and resizable table. Each sequence will be one column of the table. All sequences must have the same length
+	_: dataframe
+table
+	Displays the given matrix-data in a scrollable and resizable table
+	_: 2D-matrix or 2D-field
+
+
+#

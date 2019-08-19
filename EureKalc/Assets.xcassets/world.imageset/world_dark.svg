@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0" y="0" width="612" height="792" viewBox="0, 0, 612, 792">
+  <g id="Calque_1">
+    <path d="M305.881,701.329 C473.723,701.329 612,563.051 612,395.448 C612,227.607 473.484,89.329 305.881,89.329 C138.04,89.329 0,227.607 0,395.448 C0,563.051 138.278,701.329 305.881,701.329 z M305.881,667.713 C155.444,667.713 33.854,545.885 33.854,395.448 C33.854,244.773 155.205,123.183 305.881,123.183 C456.317,123.183 578.149,244.773 578.383,395.448 C578.383,545.885 456.556,667.713 305.881,667.713 z" fill="#CCCCCC"/>
+    <g>
+      <path d="M503.5,402.631 C503.5,558.35 418.882,684.585 314.5,684.585" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M503.5,412.701 C503.5,244.19 423.177,107.585 324.094,107.585" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M118.5,402.374 C118.5,558.094 206.252,684.329 314.5,684.329" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M118.5,412.444 C118.5,243.934 201.798,107.329 304.551,107.329" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M229.642,402.46 C229.642,558.179 267.634,684.415 314.5,684.415" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M229.642,412.53 C229.642,244.019 265.706,107.415 310.192,107.415" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M401.76,402.545 C401.76,558.265 362.693,684.5 314.5,684.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M401.76,412.615 C401.76,244.105 364.676,107.5 318.929,107.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M303.515,486.5 C145.553,486.5 17.5,440.385 17.5,383.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M303.515,486.5 C463.117,486.5 592.5,440.385 592.5,383.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M305.129,365.5 C159.255,365.5 41,329.683 41,285.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M305.129,365.5 C452.518,365.5 572,329.683 572,285.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M303.139,590.5 C158.364,590.5 41,554.683 41,510.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M303.139,590.5 C449.418,590.5 568,554.683 568,510.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+    <g>
+      <path d="M305.483,243.5 C197.244,243.5 109.5,218.428 109.5,187.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+      <path d="M305.483,243.5 C414.845,243.5 503.5,218.428 503.5,187.5" fill-opacity="0" stroke="#CBCBCB" stroke-width="30"/>
+    </g>
+  </g>
+</svg>

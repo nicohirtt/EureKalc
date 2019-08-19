@@ -1,0 +1,242 @@
+#LIB Library
+
+#LIB Math constants
+
+#ITEM var pi Number π = 3.14
+pi=3.1415926535897932
+
+#ENDSCRIPT pi
+
+#ITEM var \p Number π = 3.14
+\p=3.1415926535897932
+
+#ENDSCRIPT \p
+
+#ITEM AUTO var π Number π = 3.14
+π=3.1415926535897932
+
+#ENDSCRIPT π
+
+#ITEM var \ph Golden ratio
+\ph=1.61803398874989484820
+
+#ENDSCRIPT \ph
+
+#ENDLIB Math constants
+
+
+#LIB Math functions
+
+#ITEM func dist euclidian distance between 2 points
+dist(x,y)=sqrt(sum((x-y)^2))
+
+#ENDSCRIPT dist
+
+#ITEM func peak a field with a peak
+peak(dim,dx,max,p0,d0)=field(dim,dx,f=(max*d0^2)/(norm(((x , y))-p0)^2+d0^2))
+
+#ENDSCRIPT peak
+
+#ENDLIB Math functions
+
+
+#LIB Physical constants
+
+#ITEM var g Gravitational field on Earth
+g=9.81[m/s2]
+
+#ENDSCRIPT g
+
+#ITEM var c Speed of light
+c=299792458[m/s]
+
+#ENDSCRIPT c
+
+#ITEM var G Universal gravitation constant
+G=6.67430e-11[N.m2.kg-2]
+
+#ENDSCRIPT G
+
+#ITEM var h Plank constant
+h=6.62607015e-34[J.s]
+
+#ENDSCRIPT h
+
+#ITEM var e Elementary charge
+e=1.602176634e-19[C]
+
+#ENDSCRIPT e
+
+#ITEM var k_c Coulomb constant
+k_c=8.9875517923e9[kg.m3.s-4.A-2]
+
+#ENDSCRIPT k_c
+
+#ITEM var \e_0 Electric permittivity
+\e_0=8.8541878128e-12[C2.N-1.m-2]
+
+#ENDSCRIPT \e_0
+
+#ITEM var \u_0 Magnetic permeability
+\m_0=1.25663706212e-6[T.m.A-1]
+µ_0=1.25663706212e-6[T.m.A-1]
+
+#ENDSCRIPT \u_0
+
+#ITEM var m_e Electron mass
+m_e=9.1093837015e-31[kg]
+
+#ENDSCRIPT m_e
+
+#ITEM var m_n Neutron mass
+m_n=1.67492749804e-27[kg]
+
+#ENDSCRIPT m_n
+
+#ITEM var m_p Proton mass
+m_p=1.67262192369e-27[kg]
+
+#ENDSCRIPT m_p
+
+#ITEM var m_µ Muon mass
+m_µ=1.883531627e-28[kg]
+
+#ENDSCRIPT m_µ
+
+#ITEM var k_B Boltzmann constant
+k_B=1.380649e-23[J.K-1]
+
+#ENDSCRIPT k_B
+
+#ITEM var N_A Avogadro Constant
+N_A=6.02214076e23[mol-1]
+
+#ENDSCRIPT N_A
+
+#ITEM var \a Fine structure constant
+\a=7.2973525693e-3
+
+#ENDSCRIPT \a
+
+#ITEM var R∞ Rydberg constant
+R∞=10973731.568160[m-1]
+
+#ENDSCRIPT R∞
+
+#ITEM var \s Stephan-Boltzmann constant
+\s=5.670374419e-8[W.m-2.K-4]
+
+#ENDSCRIPT \s
+
+#ITEM var f_Cs Hyperfine transition of 133Cs
+f_Cs=9192631770[Hz]
+
+#ENDSCRIPT f_Cs
+
+#ENDLIB Physical constants
+
+
+#LIB Astronomy
+
+#ITEM var H_0 Hubble constant
+H_0=70[km.s-1.Mpc-1]
+
+#ENDSCRIPT H_0
+
+#ITEM var R_t Mean radius of the earth
+R_t=6371[km]
+
+#ENDSCRIPT R_t
+
+#ITEM var M_t Mass of the earth
+M_t=5.9724e24[kg]
+
+#ENDSCRIPT M_t
+
+#ITEM var L_sol Luminosity of the sun
+L_sol=3.828e26[W]
+
+#ENDSCRIPT L_sol
+
+#ITEM var I_sol Mean radiance of the Sun
+I_sol=2.009e7[W.m-2.sr-1]
+
+#ENDSCRIPT I_sol
+
+#ITEM var r_sol Radius of the sun
+r_sol=696342[km]
+
+#ENDSCRIPT r_sol
+
+#ITEM var m_sol Mass of the Sun
+m_sol=1.9885e30[kg]
+
+#ENDSCRIPT m_sol
+
+#ITEM var T_sol Surface temperature (photosphere)
+5772[K]
+
+#ENDSCRIPT T_sol
+
+#ITEM var planets Solar system planets
+m_plan=(3.3011e+23[kg],4.8675e+24[kg],5.9724e+24[kg],6.4171e+23[kg],1.8982e+27[kg],5.6834e+24[kg],8.681e+25[kg],1.0241e+26[kg])
+r_plan=(2439.7[km],6051.8[km],6371[km],3389.5[km],69911[km],58232[km],25362[km],24622[km])
+To_plan=(87.969[d],224[d],365.26[d],779.96[d],4332.6[d],10747[d],30688[d],60182[d])
+Tr_plan=(58.646[d],-243.03[d],0.99727[d],1.026[d],9.925[h],10.561[h],-0.71833[d],0.6713[d])
+a_plan=(0.4667[au],0.72821[au],1.521e+08[km],1.666[au],5.4588[au],10.124[au],20.11[au],30.33[au])
+p_plan=(0.3075[au],0.71844[au],1.471e+08[km],1.382[au],4.9501[au],9.0412[au],18.33[au],29.81[au])
+rows=("Me","Ve","Te","Ma","Ju","Sa","Ur","Ne")
+cols=("m","r","Torb","Trot","aph","per")
+planets=dataframe(rows=rows,columns=cols,data=m_plan,r_plan,To_plan,Tr_plan,a_plan,p_plan)
+delete(rows,cols,m_plan,r_plan,To_plan,Tr_plan,a_plan,p_plan)
+
+#ENDSCRIPT planets
+
+#ENDLIB Astronomy
+
+
+#LIB Physics formulas
+
+#ITEM var F_e Coulomb's force
+F_e=k_c*(q1*q2)/d^2
+
+#ENDSCRIPT F_e
+
+#ITEM var E_k Classical kinetic energy
+E_k=(m*v^2)/2
+
+#ENDSCRIPT E_k
+
+#ITEM var F_c Centripetal force (v)
+F_c=(m*v^2)/r
+
+#ENDSCRIPT F_c
+
+#ITEM var F_c Centripetal force (w)
+F_c=m*\w^2*r
+
+#ENDSCRIPT F_c
+
+#ITEM var F_g Universal gravitation force
+F_g=G*(m1*m2)/d^2
+
+#ENDSCRIPT F_g
+
+#ENDLIB Physics formulas
+
+
+#LIB Scripts
+
+#ITEM script test test script
+x=0
+for(x,0:10)
+    print(x)
+next
+
+#ENDSCRIPT test
+
+#ENDLIB Scripts
+
+
+#ENDLIB Library
+

@@ -1,0 +1,96 @@
+#NO				
+		1.0	0.0	
+rad		1.0	0.0	
+deg		0.017453292519943	0.0	
+%		0.01	0.0	
+‰		0.001	0.0	
+				
+#MASS				
+kg	kg1	1.0	0.0	
+g	kg1	1e-3	0.0	µ,m,c,d
+t	kg1	1e3	0.0	k,M,G
+				
+#DISTANCE				
+m	m1	1.0	0.0	n,µ,m,c,d,da,k
+mi	m1	1609.344	0.0	
+nmi	m1	1852.0	0.0	
+ft	m1	0.3048	0.0	
+ly	m1	9.4607e15	0.0	
+al	m1	9.4607e15	0.0	
+au	m1	1.4960e11	0.0	
+pc	m1	3.0857e16	0.0	k
+#				
+#SURFACE				
+m2	m2	1.0	0.0	
+dm2	m2	1.0e-2	0.0	
+cm2	m2	1.0e-4	0.0	
+mm2	m2	1.0e-6	0.0	
+km2	m2	1.0e-6	0.0	
+a	m2	100.0	0.0	c,h
+#				
+#volume				
+m3	m3	1.0	0.0	
+dm3	m3	1.0e-3	0.0	
+cm3	m3	1.0e-6	0.0	
+mm3	m3	1.0e-9	0.0	
+km3	m3	1.0e9	0.0	
+l	m3	1.0e-3	0.0	m,c,d,h
+pc3	m3	2.938e49	0.0	
+				
+#TIME				
+s	s1	1.0	0.0	f,n,µ,m
+min	s1	60.0	0.0	
+h	s1	3600.0	0.0	
+d	s1	86400.0	0.0	
+an	s1	31556952	0.0	m,G
+y	s1	31556952	0.0	m,G
+#				
+#FREQUENCY				
+Hz	s-1	1.0	0.0	m,k,M,G
+#vitesse				
+m/s	m1s-1	1.0	0.0	m,c,k
+km/h	m1s-1	0.27777777777777777777778	0.0	
+mph	m1s-1	0.44704	0.0	
+c	m1s-1	299792458.0	0.0	
+				
+#débit				
+g/s	kg1s-1	1.0e-3	0.0	m,k
+t/s	kg1s-1	1.0e3	0.0	m,k
+#débit				
+m3/s	m3s-1	1.0	0.0	
+m3/h	m3s-1	0.0000277777777777777777777777	0.0	
+#accélération				
+m/s2	m1s-2	1.0	0.0	
+#FORCE				
+N	kg1m1s-2	1.0	0.0	m,k
+dyn	kg1m1s-2	1.0e-5	0.0	
+g'	kg1m1s-2	9.80665e-3	0.0	m,k
+#énergie				
+J	kg1m2s-2	1.0	0.0	m,k,M,G,T
+erg	kg1m2s-2	1.0e-7	0.0	
+eV	kg1m2s-2	1.602176565e-19	0.0	k,M,G,T,P
+Wh	kg1m2s-2	3600.0	0.0	k,M,G,T
+#puissance				
+W	kg1m2s-3	1.0	0.0	µ,m,k,M,G,T,P
+#courant				
+A	A1	1.0	0.0	µ,m
+#charge				
+C	A1s1	1.0	0.0	n,µ,m
+e	A1s1	1.602176565e-19	0.0	
+#champ				
+N/C	A-1kg1m1s-3	1.0	0.0	µ,m,k,M
+V/m	A-1kg1m1s-3	1.0	0.0	µ,m,k,M
+#tension				
+V	A-1kg1m2s-3	1.0	0.0	µ,m,k,M,G,T
+#résistance				
+Ω	A-2kg1m2s-3	1.0	0.0	k,M
+#champ				
+T	A-1kg1s-2	1.0	0.0	µ,m
+#température				
+K	K1	1.0	0.0	
+°C	K1	1.0	273.15	
+°F	K1	0.555555555555555555555555	255.3722222222222222222222	
+#chimie				
+mol	mol1	1.0	0.0	
+#intensité				
+cd	cd1	1.0	0.0	

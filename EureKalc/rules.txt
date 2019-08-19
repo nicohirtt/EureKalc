@@ -1,0 +1,329 @@
+#RULES
+
+// 
+// Execute num calculations
+//
+M	n+r	_calc(n+r)	.	execute_sum	Calculate sum
+M	n*r	_calc(n*r)	.	execute_prod	Calculate product
+M	(n1*r1)/(n2*r2)	_calc(n1/_gcd(n1,n2)*r1)/_calc(n2/_gcd(n1,n2)*r2)	.	simplify_numbers_in_div	Simplify numbers in division
+M	n1*r1+n2*r2+r	_gcd(n1,n2)*_calc(n1/_gcd(n1,n2)*r1+n2/_gcd(n1,n2)*r2)+r	.	gcd_before_sum	Gcd of factors before sum
+//
+// moving elements
+//
+M	x=y	y=x	.	switch=	Switch members
+M	x<y	y>x	.	switch<	Switch members
+M	x>y	y<x	.	switch>	Switch members
+M	x<=y	y>=x	.	switch<=	Switch members
+M	x>=y	y<=x	.	switch>=	Switch members
+M	x≠y	y≠x	.	switch≠	Switch members
+M	x==y	y==x	.	switch==	Switch members
+M	x+y	y+x	.	switch+	Switch terms
+M	x*y	y*x	.	switch*	Switch factors
+M	x+r	x+r	0	term_in_front	Put in front
+M	x+r	r+x	0	term_at_end	Put at end
+M	x*r	x*r	0	factor_in_front	Put in front
+M	x*r	r*x	0	factor_at_end	Put at end
+//move_term_left
+//move_term_right
+//
+// Products
+//
+M	x*x*r	x^2*r	0	multiply_same_factors	Multiply same factors
+M	x+x+r	2*x+r	0	add_same_terms	Add same terms
+M	n*x+m*x+r	_calc(n+m)*x+r	.	add_same_terms	Add same terms
+M	n*x+(-(m*x))+r	_calc(n-m)*x+r	.	add_same_terms	Add same terms
+M	x+m*x+r	_calc(1+m)*x+r	.	add_same_terms	Add same terms
+//
+// divisions
+//
+M	(x*r)/y	x*(_prod(r)/y)	00	put_factor_before_div	Put factor before division
+M	x*(y/z)*r	(x*y)/z*r	0	put_factor_in_div	Put factor in division
+M	_sum(r)/a	_sum(_each(v/a,r))	.	sum_in_div	Sum of divisions
+M	(x*r1)/(x*r2)	_prod(r1)/_prod(r2)	00	simplify_factor_in_div	Simplify factor
+M	a^n	1/a^(-n)	.	power_neg_to_div	As division
+M	a/(x^b*r)	(a*x^(-b))/_prod(r)	10	div_to_neg_power	As negative power
+M	(x*r1)/(x^n*r2)	_prod(r1)/(x^_calc(n-1)*r2)	00	simplify_factor_power	Simplify factor
+M	(x^n*r1)/(x*r2)	(x^_calc(n-1)*r1)/_prod(r2)	00	simplify_factor_power	Simplify factor
+M	(x*r1)/(x^a*r2)	_prod(r1)/(x^(a-1)*r2)	00	simplify_factor_power	Simplify factor
+//
+// distributivity
+//
+M	-_sum(r)	_sum(_each(-v,r))	.	distribute_minus	Distribute minus
+M	_sum(-(x),all)	-_sum(_each(-v,all))	0	minus_before_sum	Put minus before sum
+M	_sum(r)*x*r2	_sum(_each(x*v,r))*r2	1	distribute_factor	Distribute this factor
+M	-(_sum(r)*r2)	_sum(_each(-v,r))*r2	.	distribute_minus_over_sumfactor	Distribute minus
+M	x*r1+x*r2+r	x*(_prod(r1)+_prod(r2))+r	00	put_factor_before_sum	Put factor before sum
+M	x*r1+(-(x*r2))+r	x*(_prod(r1)-_prod(r2))+r	00	put_factor_before_sum	Put factor before sum
+M	x*r1+(-(x*r2))+r	x*(_prod(r1)-_prod(r2))+r	100	put_factor_before_sum	Put factor before sum
+M	x^n1*r1+x*r2+r	x*(x^_calc(n1-1)*r1+_prod(r2))+r	.	put_factor_before_sum	Put factor before sum
+//
+// Powers and roots
+//
+M	x*x^n*r	x^_calc(n+1)*r	0	multiply_same_factors	Multiply factors
+M	x^m*x^n*r	x^_calc(n+m)*r	00	multiply_same_factors	Multiply factors
+M	x^a*x^b*r	x^(a+b)*r	00	multiply_same_factors	Multiply factors
+M	a^_sum(r)	_prod(_each(a^v,r))	1	decompose_power	Decompose power
+M	_prod(r)^a	_prod(_each(v^a,r))	.	distribute_power	Distribute power
+M	_prod(r)^a	_prod(_each(v^a,r))	1	distribute_power	Distribute power
+M	(a/b)^x	a^x/b^x	.	distribute_power_over_div	Distribute power
+M	(a/b)^x	a^x/b^x	1	distribute_power_over_div	Distribute power
+M	sqrt(x^2)	x	.	out_of_sqrt	Simplify
+M	sqrt(x^2)	-x	.	out_of_sqrt_min	Simplify negative
+M	sqrt(bef*x^2*aft)	x*sqrt(bef*aft)	01	out_of_sqrt_prod	Factor out of square root
+M	sqrt(bef*x^n*aft)	x^_calc(n/2)*sqrt(bef*aft)	01	out_of_sqrt_prod	Factor out of square root
+M	x*sqrt(y)*r	sqrt(x^2*y)*r	0	put_into_sqrt	Put factor under square root
+M	(x^n1)^n2	x^_calc(n1*n2)	.	multiply_powers	Multiply powers and calc
+M	(x^a)^b	x^_calc(a*b)	.	multiply_powers	Multiply powers
+M	(sqrt(x)*r1)/(sqrt(y)*r2)	sqrt(x/y)*r1/r2	.	div_of_roots	Combine roots
+M	sqrt(x)*sqrt(y)*r	sqrt(x*y)*r	.	prod_of_roots	Combine roots
+M	(x+y)^2	x^2+y^2+2*x*y	.	square_of_sum	Square of a sum
+M	sqrt(a/b)	sqrt(a)/sqrt(b)	.	root_of_division	Root of division
+M	sqrt(a)/sart(b)	sqrt(a/b)	.	division_of_roots	Division of roots
+M	(-x)^2	x^2	.	square_of_minus	Remove minus
+M	x^n	x*x^_calc(n-1)	.	decompose	Decompose the power
+//
+// log
+//
+M	log(a,x)	Log(x)/Log(a)	.	logax_to_Log	log to Log
+M	log(a,x)	ln(x)/ln(a)	.	logax_to_ln	log to ln
+M	log(a,b)	1/log(b,a)	.	logab_to_logba	Inverse log base
+//
+// Trigonometry
+//
+M	sin(a)^2+cos(a)^2+r	1+r	.	sin_cos_square_sum	Change to 1
+M	(sin(x)*r1)/(cos(x)*r2)	tan(x)*r1/_prod(r2)	.	sincostan	sin/cos=tan
+M	tan(x)	sin(x)/cos(x)	.	tansincos	tan=sin/cos
+S	sin(asin(x))	x	.	sin_asin	Simplify sin(asin)
+S	cos(acos(x))	x	.	cos_acos	Simplify cos(acos)
+M	asin(sin(x))	x	.	asin_sin	Simplify asin(sin)
+M	asin(sin(x))	π-x	.	asin_sin_π	Simplify asin(sin) to π-x
+M	acos(cos(x))	x	.	acos_cos	Simplify acos(cos)
+M	acos(cos(x))	-(x)	.	acos_cos_π	Simplify acos(cos) to -x
+//
+// Solving equations
+//
+M	x=y	-(x)=-(y)	.	negate_equation	Multiply equation by -1
+M	x=y	1/x=1/y	.	inverse_equation	Inverse
+M	x=y	x^2=y^2	.	square_equation	Square
+M	x=y	sqrt(x)=sqrt(y)	.	sqrt_equation	Square root
+I	x+r=y	x=y+_each(-(v),r)	00	isolate_term	Isolate term
+I	x*r=y	x=y/_prod(r)	00	isolate_factor	Solve factor
+I	-x=y	x=-y	00	isolate_minus_arg	Solve
+I	x/y=z	x=y*z	00	isolate_numerator	Solve factor
+I	(x*r)/y=z	x=(y*z)/_prod(r)	000	isolate_num_factor	Solve factor
+I	y/x=z	x=y/z	01	isolate_denominator	Solve factor
+I	y/(x*r)=z	x=y/(z*r)	010	isolate_denom_factor	Solve factor
+I	sqrt(x)=y	x=y^2	00	isolate_sqrt_arg	Solve
+I	x^2=y	x=sqrt(y)	00	isolate_square_arg	Solve
+I	x^2=y	x=-sqrt(y)	00	isolate_square_arg	Solve
+I	x^n=y	x=y^(1/n)	00	isolate_square_arg	Solve
+I	sin(x)=y	x=asin(y)	00	isolate_sin_arg	Solve
+I	cos(x)=y	x=acos(y)	00	isolate_cos_arg	Solve
+I	tan(x)=y	x=atan(y)	00	isolate_tan_arg	Solve
+I	x^2*ra+x*rb+rc=0	x=(-rb+sqrt(_calc(rb^2-4*ra*rc)))/_calc(2*ra))	0000	quadratic_equation	Solve
+I	x^2*ra+x*rb+rc=0	x=(-rb+(-sqrt(_calc(rb^2-4*ra*rc))))/_calc(2*ra))	0000	quadratic_equation	Solve
+I	Log(x)=y	x=10^y	00	Log_to_power	Solve
+I	ln(x)=y	x=exp(y)	00	ln_to_power	Solve
+I	log(a,x)=y	x=a^y	01	log_to_power	Solve
+I	log(a,x)=y	a=x^(1/y)	00	base_of_log	Solve
+I	10^x=y	x=Log(y)	01	power_to_Log	Solve
+I	a^y=x	y=log(a,x)	01	pow_to_log	Solve
+I	exp(x)=y	x=ln(y)	00	exp_to_ln	Solve
+//
+// Manual simplify
+A	_div(a,_div(b,c))	_div(_prod(a,c),b)	.	simplify_div_by_div	Simplify division
+A	_div(_div(x,y),z)	_div(x,_prod(y,z))	.	simplify_div_numerator	Simplify division
+A	_div(_prod(_div(x,y),r),z)	_div(_prod(x,r),_prod(y,z))	.	division_in_numerator	Simplify division
+// auto rules
+A	a+0	a	.	sum_zero	sum_zero
+A	_sum(0,r)	_sum(r)	.	sum_zero	sum_zero
+A	_sum(a)	a	.	sum_one_term	sum_one_term
+A	_sum(a,_sum(r))	_sum(a,r)	.	sum_of_sums	sum_of_sums
+//
+A	a*1	a	.	prod_one	prod_one
+A	a*(-1)	-a	.	prod_one	prod_one
+A	_prod(1,r)	_prod(r)	.	prod_one	prod_one
+A	_prod(0,r)	0	.	prod_zero	prod_zero
+A	_prod(a)	a	.	prod_one_factor	prod_one_factor
+A	_prod(a,_prod(r),r2)	_prod(a,r,r2)	.	prod_of_prods	prod_of_prods
+//
+A	_div(a,1)	a	.	div_by_one	div_by_one
+A	_div(1,_div(a,b))	_div(b,a)	.	div_one_by_div	div_one_by_div
+A	(-a)/b	-(a/b)	.	minus_in_div	minus_in_div
+//
+A	-(-(a))	a	.	minus_minus	minus_minus
+A	x-0+r	x+r	.	minus_zero	minus_zero
+A	-a+b	b-a	.	minus_plus	minusplus
+A	-(a-b)	b-a	.	minus-difference	minusdiff
+//
+A	_pow(a,1)	a	.	power_one	power_one
+A	_pow(sqrt(a),2)	a	.	square_of_sqrt	square_of_sqrt
+A	_pow(1,n)	1	.	power_of_one	power_of_one
+//
+A	deriv(x,x)	1	.	deriv_of_x	derivative of x = 1
+M	deriv(ctx,x)	0	.	deriv_of_const	derivative of constant = 0
+A	deriv(n,x)	0	.	deriv_of_const_n	derivative of constant = 0
+M	deriv(-(a),x)	-deriv(a,x)	.	deriv_of_neg	derivative of negative
+M	deriv(_sum(r),x)	_sum(_each(deriv(v,x),r))	.	deriv_of_sum	derivative of a sum
+M	deriv(a*b,x)	_sum(a*deriv(b,x)+b*deriv(a,x))	.	deriv_of_prod	derivative of a product
+M	deriv(ctx*a,x)	ctx*deriv(a,x)	.	deriv_of_prod_n	derivative of a product
+M	deriv(a/b,x)	(b*deriv(a,x)-a*deriv(b,x))/b^2	.	deriv_of_div	derivative of a division
+M	deriv(ctx/a,x)	-(ct/b^2)*deriv(b,x)	.	deriv_of_inverse	derivative of an inverse
+M	deriv(a^n,x)	n*a^_calc(n-1)*deriv(a,x)	.	deriv_of_power	derivative of a power
+M	deriv(x^n,x)	n*x^_calc(n-1)	.	deriv_of_power	derivative of a power
+M	deriv(sqrt(a),x)	deriv(a,x)/(2*sqrt(a))	.	deriv_of_sqrt	derivative of a square root
+M	deriv(sqrt(x),x)	1/(2*sqrt(x))	.	deriv_of_sqrt	derivative of a square root
+M	deriv(sin(a),x)	cos(a)*deriv(a,x)	.	deriv_of_sin	derivative of a sine
+M	deriv(cos(a),x)	-sin(a)*deriv(a,x)	.	deriv_of_cos	derivative of a cosine
+M	deriv(tan(a),x)	deriv(a,x)/(sin(a)^2)	.	deriv_of_tan	derivative of a tangens
+M	deriv(exp(x),x)	exp(x)	.	deriv_of_exp	derivative of exponential
+M	deriv(exp(ctx*x),x)	ctx*exp(ctx*x)	.	deriv_of_exp2	derivative of exponential
+M	deriv(ctx^x,x)	ctx*exp(x)*ln(ctx)	.	deriv_of_exp3	derivative of exponential
+M	deriv(u^y,x)	y*u^(y-1)*deriv(u,x)+u^y*ln(u)*deriv(y,x)	.	deriv_of_exp4	general derivative of exponential
+//
+// Integrals
+//
+T	integ(a+b,x)	integ(a,x)+integ(b,x)	.	integral_of_sum	integral of a sum
+M	integ(a*b,x)	a*integ(b,x)-integ(integ(b,x),a)	.	integral_by_parts	integration by parts
+M	integ(a,y)	integ(a*deriv(y,x),x)	.	integral_dx	decompose dx
+M	integ(x,x)	x^2/2	.	integral_of_x	calculate integral
+M	integ(x^n,x)	x^(n+1)/(n+1)	.	integral_of_power	calculeta integral
+M	integ(ctx,x)	ctx*x	.	integral_const	calculate integral
+M	integ(ctx*a,x)	ctx*integ(a,x)	.	integral_prod_n	calculate integral
+M	integ(exp(x),x)	exp(x)	.	integral_exp	integral of exponential
+M	integ(exp(a*x),x)	1/a*exp(a*x)	.	integral_exp_2	integral of exponential
+M	integ(sin(x),x)	-cos(x)	.	integral_sin	integral of sine
+M	integ(sin(ctx*x),x)	-1/ctx*cos(x)	.	integral_sin	integral of sine
+
+
+#LANG	fr
+execute_sum	Calculer la somme
+execute_prod	Calculer le produit
+simplify_numbers_in_div	Simplifier la division
+gcd_before_sum	Mise en évidence du PGCD
+switch=	Echanger les membres
+switch<	Echanger les membres
+switch>	Echanger les membres
+switch<=	Echanger les membres
+switch>=	Echanger les membres
+switch≠	Echanger les membres
+switch==	Echanger les membres
+switch+	Echanger les termes
+switch*	Echanger les facteur
+term_in_front	Placer à l'avant
+term_at_end	Placer à l'arrière
+factor_in_front	Placer à l'avant
+factor_at_end	Placer à l'arrière
+multiply_same_factors	Multiplier les facteurs
+add_same_terms	***missing***
+put_factor_before_div	Sortir ce facteur de la division
+put_factor_in_div	Placer au numérateur de la division
+sum_in_div	Somme de divisions
+simplify_factor_in_div	Simplifier le facteur
+power_neg_to_div	Transforme en division
+div_to_neg_power	Transforme en exposant négatif
+simplify_factor_power	***missing***
+distribute_minus	Distribuer le "-"
+minus_before_sum	Sortir le "-" de la somme
+distribute_factor	Distribuer ce facteur sur la somme
+distribute_minus_over_sumfactor	Distribuer le "-"
+put_factor_before_sum	Mise en évidence
+decompose_power	Décomposition en produit
+distribute_power	Distribuer l'exposant
+distribute_power_over_div	Distribuer l'exposant
+out_of_sqrt	Simplifier
+out_of_sqrt_min	Simplifier (-)
+out_of_sqrt_prod	Sortir le facteur de la racine
+put_into_sqrt	Placer sous la racine
+multiply_powers	***missing***
+div_of_roots	***missing***
+prod_of_roots	***missing***
+square_of_sum	Carré d'un somme
+root_of_division	Racine d'une fraction
+division_of_roots	Division de racines
+square_of_minus	Supprimer le moins
+decompose	Décompose la puissance
+logax_to_Log	***missing***
+logax_to_ln	log -> ln
+logab_to_logba	Inverser la base
+sin_cos_square_sum	Remplacer par 1
+sincostan	***missing***
+tansincos	tan=sin/cos
+sin_asin	Simplifier sin(asin)
+cos_acos	Simplifier cos(acos)
+asin_sin	Simplifier asin(sin)
+asin_sin_π	Simplifier asin(sin) en π-x
+acos_cos	Simplifier acos(cos)
+acos_cos_π	Simplifier acos(cos) en -x
+negate_equation	Multiplie l'équation par -1
+inverse_equation	Inverser
+square_equation	Elever au carré
+sqrt_equation	Racine carrée
+isolate_term	Isoler ce terme
+isolate_factor	Isoler ce facteur
+isolate_minus_arg	Isoler
+isolate_numerator	Isoler ce facteur
+isolate_num_factor	Isoler ce facteur
+isolate_denominator	Isoler ce facteur
+isolate_denom_factor	Isoler ce facteur
+isolate_sqrt_arg	Isoler
+isolate_square_arg	Isoler
+isolate_sin_arg	Isoler
+isolate_cos_arg	Isoler
+isolate_tan_arg	Isoler
+quadratic_equation	Isoler
+Log_to_power	Isoler
+ln_to_power	Isoler
+log_to_power	***missing***
+base_of_log	Isoler
+power_to_Log	Isoler
+pow_to_log	Isoler
+exp_to_ln	Isoler
+simplify_div_by_div	Simplier la division
+simplify_div_numerator	Simplier la division
+division_in_numerator	Simplifier la division
+sum_zero	***missing***
+sum_one_term	***missing***
+sum_of_sums	***missing***
+prod_one	***missing***
+prod_zero	***missing***
+prod_one_factor	***missing***
+prod_of_prods	***missing***
+div_by_one	***missing***
+div_one_by_div	***missing***
+minus_in_div	***missing***
+minus_minus	***missing***
+minus_zero	***missing***
+minus_plus	***missing***
+minus-difference	***missing***
+power_one	***missing***
+square_of_sqrt	***missing***
+power_of_one	***missing***
+deriv_of_x	dérivée de x = 1
+deriv_of_const	dérivée d'une constante = 0
+deriv_of_const_n	***missing***
+deriv_of_neg	dérivée d'un opposé
+deriv_of_sum	dérivée d'une somme
+deriv_of_prod	dérivée d'un produit
+deriv_of_prod_n	dérivée d'un produit constant
+deriv_of_div	dérivée d'une division
+deriv_of_inverse	dérivée d'un inverse
+deriv_of_power	dérivée d'une puissance
+deriv_of_sqrt	dérivée d'une racine carrée
+deriv_of_sin	dérivée d'un sinus
+deriv_of_cos	dérivée d'un cosinus
+deriv_of_tan	dérivée d'une tangente
+deriv_of_exp	dérivée d'une exponentielle
+deriv_of_exp2	dérivée d'une exponentielle
+deriv_of_exp3	dérivée d'une exponentielle
+deriv_of_exp4	dérivée générale d'une exponentielle
+integral_of_sum	intégrale d'une somme
+integral_by_parts	intégration par parties
+integral_dx	décompose dx
+integral_of_x	calcule l'intégrale
+integral_of_power	calcule l'intégrale
+integral_const	calcule l'intégrale
+integral_prod_n	calcule l'intégrale
+integral_exp	intégrale d'une exponentielle
+integral_exp_2	intégrale d'une exponentielle
+integral_sin	intégrale du sinus

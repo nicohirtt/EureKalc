@@ -1,0 +1,1619 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2706
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\fswiss\fcharset0 Helvetica-Oblique;
+\f3\fswiss\fcharset0 Helvetica-BoldOblique;\f4\fnil\fcharset0 LucidaGrande;\f5\fnil\fcharset134 PingFangSC-Regular;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red243\green235\blue10;
+\red0\green0\blue0;\red114\green44\blue253;\red217\green11\blue5;\red5\green68\blue254;\red0\green0\blue255;
+}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;\cssrgb\c100000\c100000\c100000;\cssrgb\c96264\c92423\c0;
+\cssrgb\c0\c0\c0\c0;\cssrgb\c52799\c30710\c99498;\cssrgb\c88946\c14202\c0;\cssrgb\c0\c38136\c99824;\cssrgb\c0\c0\c100000;
+}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}}
+\paperw11900\paperh16840\margl1440\margr1440\vieww17740\viewh15540\viewkind0
+\deftab20
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b\fs36 \cf2 \cb3 Help
+\fs24 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 DATA\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 Variable definition
+\f1\b0  : 
+\f2\i  variable_name
+\f1\i0  = 
+\f2\i expression\
+	
+\f1\i0 use \\ to get greek letters in var name (\\b = \'df)\
+	use _ to force subscript in var name\
+
+\f0\b Function definition
+\f1\b0  :
+\f2\i  function_name
+\f1\i0 (
+\f2\i var1, var2, var3,
+\f1\i0 ...) = 
+\f2\i expression
+\f1\i0 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb5 type
+\f1\b0 (x) : integer, double, string, bool, color, exp or field\
+
+\f0\b dim
+\f1\b0 (x) or 
+\f0\b dims
+\f1\b0 (x) : dimensions of x\
+
+\f0\b count
+\f1\b0 (x) : total number of elements in x\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb3 delete
+\f1\b0 (var = 
+\f2\i variable1
+\f1\i0  (or 
+\f2\i function)
+\f1\i0 , 
+\f2\i variable2
+\f1\i0 , 
+\f2\i variable3
+\f1\i0 ,\'85)\
+
+\f0\b use
+\f1\b0 (
+\f2\i variable1
+\f1\i0  (or 
+\f2\i function)
+\f1\i0 , 
+\f2\i variable2
+\f1\i0 , 
+\f2\i variable3
+\f1\i0 ,\'85) get var from library\cb5 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 ELEMENTARY MATH\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 + , - , * ,  /, ^ 
+\f1\b0 = elementary operators
+\f0\b \
+%
+\f1\b0  reminder of integer division\
+
+\f0\b //
+\f1\b0  priority division operator\
+
+\f0\b #
+\f1\b0  extracts one element from a collection : a#3, x#(2,6)\
+\
+
+\f0\b sin
+\f1\b0 (
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b cos
+\f1\b0 (
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b tan
+\f1\b0 (
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b asin
+\f1\b0 (
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b acos
+\f1\b0 (
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b atan
+\f1\b0 (
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b ln
+\f1\b0 (
+\f2\i doubles
+\f1\i0 ) : natural log, \
+
+\f0\b Log
+\f1\b0 (
+\f2\i doubles
+\f1\i0 ) : decimal log]\
+
+\f0\b log
+\f1\b0 (a : 
+\f2\i double
+\f1\i0  ,x : 
+\f2\i doubles
+\f1\i0 ) : log of x in base a (>0)\
+
+\f0\b exp
+\f1\b0 (
+\f2\i doubles
+\f1\i0 ) : exponential\
+
+\f0\b abs
+\f1\b0 (
+\f2\i doubles
+\f1\i0 ) : absolute value\
+
+\f0\b sqrt
+\f1\b0 (
+\f2\i doubles
+\f1\i0 ) : square root\
+
+\f0\b int
+\f1\b0 (
+\f2\i doubles
+\f1\i0 ) : integer part\
+
+\f0\b round
+\f1\b0 (doubles) : nearest integer\
+
+\f0\b rnd
+\f1\b0 (x : 
+\f2\i integer
+\f1\i0  =1) or 
+\f0\b random
+\f1\b0 () :\
+	- random number between 0 and 1 (if x=1)\
+	- random integer between 1 and x (if x > 1)\
+\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 STRINGS
+\f1\b0 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb3 +
+\f1\b0  : strings concatenation operator\
+
+\f0\b alpha
+\f1\b0 (n : 
+\f2\i integers 
+\f1\i0 , [upper = TRUE]) : n-th letters of alphabet\
+
+\f0\b unicode
+\f1\b0 (n : 
+\f2\i integers 
+\f1\i0 , [single = FALSE]) : unicode characters\
+
+\f0\b unicode
+\f1\b0 (
+\f2\i string
+\f1\i0 ) : vector of unicode values\
+
+\f0\b length
+\f1\b0 (
+\f2\i string
+\f1\i0 ) : number of characters\
+
+\f0\b left
+\f1\b0 (
+\f2\i string
+\f1\i0 , n, [drop=0]) : substring of n characters omitting drop first\
+
+\f0\b right
+\f1\b0 (
+\f2\i string
+\f1\i0 , n, drop = 0) : substring of n characters from the right, omitting the 
+\f2\i drop
+\f1\i0  lasts\
+
+\f0\b position
+\f1\b0 (
+\f2\i substring
+\f1\i0 , 
+\f2\i string
+\f1\i0 ) : index of first occurence of substring\
+
+\f0\b strings
+\f1\b0 (list) : transforms all args to strings\
+
+\f0\b \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb4 BOOLEANS\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 \cb3 Bool values : 
+\f0\b TRUE, FALSE
+\f1\b0 \
+Strings & number comparison operators :
+\f0\b  ==, \uc0\u8804 , \u8805 , >, <, \u8800 
+\f1\b0 \
+Logical operators : 
+\f0\b +, *, - 
+\f1\b0    =   
+\f0\b AND
+\f2\i\b0 , 
+\f0\i0\b OR, NOT
+\f1\b0 ()
+\f0\b  \
+bool
+\f1\b0 (x) : TRUE if x>0, otherwise FALSE\
+\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 COLLECTIONS AND STATISTICS\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 x=(
+\f2\i item0, item1, item2, item3
+\f1\i0 \'85.)\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 x#
+\f1\b0 n : element n of x (indexes start at 0 !)\
+
+\f0\b x\{
+\f2\i\b0 integer0, integer1, 
+\f0\i0\b \} : 
+\f1\b0 elements of x with given indexes\
+
+\f0\b sequence
+\f1\b0 (
+\f0\b min
+\f1\b0 : 
+\f2\i double
+\f1\i0  , [
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0 ], [
+\f0\b step
+\f1\b0  : 
+\f2\i double
+\f1\i0 ] , [
+\f0\b mult
+\f1\b0  : 
+\f2\i double
+\f1\i0 ], [
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 ] ) : \
+
+\f0\b a:b:c
+\f1\b0  is shorthand for sequence(a, b, c)\
+
+\f0\b a:b
+\f1\b0  is shorthand for sequence (a, b, 1)\
+
+\f0\b sequence
+\f1\b0 (
+\f0\b exp
+\f1\b0  : 
+\f2\i expression
+\f1\i0 , 
+\f0\b var
+\f1\b0  : 
+\f2\i variable
+\f1\i0 , 
+\f0\b indexes
+\f2\i\b0  : integers
+\f1\i0 )\
+
+\f0\b repeat
+\f1\b0 (
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b x
+\f1\b0  : 
+\f2\i any scalar
+\f1\i0 )  : collection containing n times 
+\f2\i x
+\f1\i0 \
+
+\f0\b rnd
+\f1\b0 ([
+\f0\b x
+\f1\b0  : 
+\f2\i integer
+\f1\i0 =1], [
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 =1] ) : n random double numbers between 0 and 1 or n random integers between 1 and x (if x \uc0\u8800  1) \
+
+\f0\b uniformdis
+\f1\b0 (
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b min
+\f1\b0  : 
+\f2\i double 
+\f1\i0 = 0, 
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0  =1 )\
+
+\f0\b normaldis
+\f1\b0 (
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b mean
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0, 
+\f0\b sd
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 1, 
+\f0\b min
+\f1\b0  : 
+\f2\i double
+\f1\i0  = -\uc0\u8734  , 
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0  = +\uc0\u8734  )\
+
+\f0\b lognormaldis
+\f1\b0 (
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b mean
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0, 
+\f0\b sd
+\f1\b0  : 
+\f2\i double
+\f1\i0  =1)\
+
+\f0\b boltzmann
+\f1\b0 (
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b mean
+\f1\b0  : 
+\f2\i double
+\f1\i0 , 
+\f0\b a
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 1, [
+\f0\b m
+\f1\b0  : 
+\f2\i double
+\f1\i0 , 
+\f0\b T
+\f1\b0  : 
+\f2\i double
+\f1\i0 ])   or   
+\f0\b maxwell
+\f1\b0 (\'85) \
+
+\f0\b choose
+\f1\b0 (
+\f0\b prob
+\f1\b0  : 
+\f2\i doubles , 
+\f0\i0\b n 
+\f1\b0 : 
+\f2\i integer
+\f1\i0  = 1 )
+\f2\i  :
+\f1\i0  n random integers between 0 and count(prob)-1\
+
+\f0\b randombool
+\f1\b0 ( 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b prob
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0.5 )  : collection of n boolean values with probability prob\
+
+\f0\b randombool
+\f1\b0 ( 
+\f0\b prob
+\f1\b0  : 
+\f2\i doubles
+\f1\i0  = 0.5 ) : collection of boolean values with probabilities prob\
+
+\f0\b sum
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b mean
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b median
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b var(x)
+\f1\b0  or 
+\f0\b variance
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b min
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b max
+\f1\b0 (
+\f0\b x
+\f1\b0  : doubles)\
+
+\f0\b sd
+\f1\b0 (
+\f0\b x
+\f1\b0  : doubles) or 
+\f0\b std
+\f1\b0 ()
+\f0\b  
+\f1\b0 or 
+\f0\b stdev
+\f1\b0 () = standard deviation\
+
+\f0\b norm
+\f1\b0 (
+\f0\b x
+\f1\b0  : doubles) = sqrt(sum(x^2))\
+
+\f0\b sum
+\f1\b0 (
+\f0\b exp
+\f1\b0  : 
+\f2\i expression
+\f1\i0 , 
+\f0\b var
+\f1\b0  : 
+\f2\i variable
+\f1\i0 , 
+\f0\b indexes
+\f1\b0  : 
+\f2\i integers
+\f1\i0 )\
+
+\f0\b count
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i any
+\f1\i0  
+\f2\i collection
+\f1\i0  , [
+\f0\b test
+\f1\b0  : 
+\f2\i any
+\f1\i0 ] ) : number of values in x (equal to test if given)\
+
+\f0\b extract
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , [
+\f0\b test
+\f1\b0  : 
+\f2\i bools
+\f1\i0 ], [
+\f0\b indexes
+\f1\b0  : 
+\f2\i integers
+\f1\i0 ] )\
+
+\f0\b limited
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b min
+\f1\b0  : 
+\f2\i double
+\f1\i0 , 
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0 , 
+\f0\b smooth 
+\f1\b0 : 
+\f2\i bool
+\f0\i0\b  
+\f1\b0 = TRUE, 
+\f0\b deriv
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 1) : \
+
+\f0\b makeindex
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b min
+\f1\b0  : 
+\f2\i double
+\f1\i0 , 
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0 , 
+\f0\b slope
+\f1\b0  : double = 1.0, 
+\f0\b center
+\f1\b0  = 0.0)\
+
+\f0\b sorted
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b descending
+\f1\b0  : bool = FALSE) : sorted collection\
+
+\f0\b classes
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i collection
+\f1\i0 , [
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 ], [
+\f0\b min
+\f1\b0  : 
+\f2\i double
+\f1\i0 ], [
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0 ], 
+\f0\b centers
+\f1\b0  : 
+\f2\i bool
+\f1\i0  = FALSE )\
+
+\f0\b quantiles
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0  , 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 ) : returns the n+1 limits of the n quantile classes of x\
+
+\f0\b freq
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i collection
+\f1\i0 , \'85) : frequencies of x for a given classification. 3 syntaxes :\
+
+\f0\b freq
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b by
+\f1\b0  = discrete collection same count as x, [
+\f0\b in
+\f1\b0  : some values of by] )\
+
+\f0\b freq
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b limits
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )  limits = class limits for a continuous variable x\
+
+\f0\b freq
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i any collection
+\f1\i0 , [
+\f0\b in
+\f1\b0  : 
+\f2\i some values]
+\f1\i0  ) : x is a collection of discrete values.\
+
+\f0\b rfreq
+\f1\b0  : same syntaxes as freq() for relative frequencies\
+The two first syntaxes apply also to :\
+	
+\f0\b sums() 
+\f1\b0 : sums of x-values for each class\
+	
+\f0\b means() 
+\f1\b0 : means of x-values for each class\
+	
+\f0\b sts
+\f1\b0 () or 
+\f0\b stds
+\f1\b0 ()
+\f0\b  or stdevs
+\f1\b0 () : standard deviations\
+	
+\f0\b vars
+\f1\b0 ()  : variances\
+	
+\f0\b dens
+\f1\b0 () : densities\
+
+\f0\b density
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0  , [
+\f0\b min
+\f1\b0  : 
+\f2\i double
+\f1\i0 ], [
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0 ]) : density distribution of x\
+
+\f0\b cov 
+\f1\b0 or 
+\f0\b covariance
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0  , 
+\f0\b y
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b r2 
+\f1\b0 or 
+\f0\b rsquare
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0  , 
+\f0\b y
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 ) : coefficient of determination \
+
+\f0\b corr 
+\f1\b0 or 
+\f0\b correlation
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0  , 
+\f0\b y
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 ) : Pearsons linear correlation coefficient\
+\
+\pard\tx20\tx385\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\li385\fi-385\partightenfactor0
+\ls1\ilvl0\cf2 \cb1 {\listtext	\uc0\u8226 	}
+\f0\b \cb4 VECTORS, MATRICES AND FIELDS\
+\ls1\ilvl0
+\f1\b0 \cb1 {\listtext	\uc0\u8226 	}\cb3 	\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 dim
+\f1\b0 (x) or 
+\f0\b dims
+\f1\b0 (x) : dimensions of matrix (or hypermatrix) x\
+
+\f0\b \'95 : 
+\f1\b0 scalar product (round dot)\
+
+\f0\b ** : 
+\f1\b0 vector product (or cross product)\
+
+\f0\b matrix
+\f1\b0 (
+\f0\b dim
+\f1\b0  : 
+\f2\i integers
+\f1\i0 , 
+\f0\b data
+\f1\b0  : 
+\f2\i any values
+\f1\i0  = 0, [ 
+\f0\b f
+\f1\b0  : 
+\f2\i expression
+\f1\i0 ] )  :  creates a matrix or hypermatrix\
+
+\f0\b field
+\f1\b0 (
+\f0\b dim
+\f1\b0  : 
+\f2\i integers
+\f1\i0 , 
+\f0\b dx
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 1m, [
+\f0\b origin
+\f1\b0  : 
+\f2\i vector 
+\f1\i0 ]
+\f2\i ,\cf6  
+\f1\i0 [
+\f0\b center
+\f2\i\b0  : vector
+\f1\i0 ]
+\f2\i , 
+\f1\i0 \cf2 [
+\f0\b data
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 ], [
+\f0\b f
+\f1\b0  : 
+\f2\i expression
+\f1\i0 ]
+\f2\i , 
+\f1\i0 [
+\f0\b vector
+\f1\b0  : 
+\f2\i integer 
+\f1\i0 ]) : creates a field \
+
+\f0\b fieldval
+\f1\b0 (
+\f0\b field
+\f1\b0  : 
+\f2\i field
+\f1\i0 , 
+\f0\b coords
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , [
+\f2\i doubles, doubles,\'85
+\f1\i0 ])\
+
+\f0\b doublefield
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i field
+\f1\i0 , 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 )\
+
+\f0\b reducefield
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i field
+\f1\i0 , 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 )\
+f
+\f0\b ieldinfo
+\f1\b0 (
+\f2\i field
+\f1\i0 ) :  returns following info as list\
+
+\f0\b 	fieldorigin
+\f1\b0 (
+\f2\i field
+\f1\i0 )\
+	
+\f0\b \cf6 fieldcenter
+\f1\b0 (field)\
+	
+\f0\b \cf2 cellsize
+\f1\b0 (
+\f2\i field
+\f1\i0 )\
+	
+\f0\b fieldsize
+\f1\b0 (
+\f2\i field
+\f1\i0 )\
+	
+\f0\b fieldvector
+\f1\b0 (
+\f2\i field
+\f1\i0 )\
+
+\f0\b gridfield
+\f1\b0 (
+\f0\b pop
+\f1\b0  : 
+\f2\i population name
+\f1\i0 , [
+\f0\b var
+\f1\b0  : 
+\f2\i string
+\f1\i0 , [
+\f0\b calc
+\f1\b0  = "mean"] ])\
+	if var is omitted : number of elements in each cell\
+	Otherwise : "mean", "sum", "sd", "var" of the variable in each cell.\
+
+\f0\b div
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i field
+\f1\i0 ) : divergence of a vector field x (returns a scalar field)\
+
+\f0\b grad
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i field
+\f1\i0 ) : gradient of a scalar field x (returns a vector field) \
+
+\f0\b slice
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i matrix
+\f1\i0 , 
+\f0\b dim
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , 
+\f0\b index
+\f1\b0  : 
+\f2\i integer
+\f1\i0 ) : \
+	extracts a (n-1)-hypermatrix from a n-hypermatrix or field\
+	dim is 0 for columns, 1 for rows, etc\'85 Index is the value of the dimension to extract.\
+
+\f0\b #
+\f1\b0  : may be used in the form 
+\f2\i field
+\f0\i0\b #
+\f1\b0 x, 
+\f2\i field
+\f0\i0\b #
+\f1\b0 y, 
+\f2\i field
+\f0\i0\b #
+\f1\b0 z to extract the corresponding coordinates of a vector field.\
+
+\f0\b submatrix
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i matrix
+\f1\i0 , 
+\f0\b coordslist
+\f1\b0  : 
+\f2\i list
+\f1\i0  ) or 
+\f0\b submat
+\f1\b0 (\'85)\
+	returns a hyper matrix with same number of dimensions as x, but containing only the elements with specified coordinates.\
+	coordslist mays be integers, collections of integers, -1 = all\
+
+\f0\b dataframe
+\f1\b0 ( 
+\f0\b data
+\f1\b0  : 
+\f2\i collection1
+\f1\i0 , [
+\f2\i collection2
+\f1\i0 , 
+\f2\i collection3
+\f1\i0 , \'85.] ,[
+\f0\b columns
+\f1\b0  : 
+\f2\i strings
+\f1\i0 ], [
+\f0\b rows
+\f1\b0  : 
+\f2\i strings
+\f1\i0 ],)\
+	\'91columns\'92 contains the column names (default : A, B, C, D\'85) and \'91rows\'92 the row names (default : 1, 2, 3, 4\'85)\
+	To inspect a dataframe, use the table(
+\f2\i dataframe
+\f1\i0 ) function.\
+
+\f0\b list
+\f1\b0 ( 
+\f2\i any
+\f1\i0 , 
+\f2\i any
+\f1\i0 , 
+\f2\i any
+\f1\i0 ,\'85)  : create a list (a collection containing elements of different types or units)\
+
+\f0\b shift
+\f1\b0 (
+\f0\b x
+\f1\b0 : 
+\f2\i matrix
+\f1\i0 , 
+\f0\b dx
+\f1\b0 : 
+\f2\i integers
+\f1\i0 )\cb5 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 GRAPHS AND COLORS\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+plot
+\f1\b0 (
+\f3\i\b x
+\f1\i0\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f3\i\b y
+\f1\i0\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f2\i doubles, doubles
+\f1\i0 \'85[+ optional arguments: see below])  : \
+	histogram (stairs) if x contains one more element than y\
+optional arguments :\
+	
+\f3\i\b x
+\f0\i0 min, xmax, ymin, ymax
+\f1\b0  :
+\f2\i  doubles : 
+\f1\i0 limits of the x and y-axes (if specified for several graphs, only the last one will be used)\
+	
+\f0\b autox, autoy
+\f1\b0  : 
+\f2\i bool
+\f1\i0  : if TRUE, adjusts automatically the limits of axes\
+	
+\f0\b linewidth
+\f1\b0  : 
+\f2\i double
+\f1\i0  : width of the trace in points\
+	
+\f0\b linetype
+\f1\b0  : 
+\f2\i integer
+\f1\i0  : (0 = continuous, 1 = dotted, 2 = dashed, 3 = dot-dash)\
+
+\f0\b 	linecolor
+\f1\b0  : 
+\f2\i color
+\f1\i0 \
+	
+\f0\b dottype
+\f1\b0  : 
+\f2\i integer :
+\f1\i0  (0 =\'a0
+\f4 \uc0\u9675 
+\f1 ,\'a01 = 
+\f4 \uc0\u9633 
+\f1 \'a0, 2 = 
+\f5 \'a1\'f7
+\f1  , 3 = 
+\f5 \'a8\'8c
+\f1  , 4 = + , 5 = x , 6 = \'95 , 7 = 
+\f4 \uc0\u9632 
+\f1 \'a0,  8 = 
+\f5 \'a1\'f8
+\f1  , 9 = 
+\f4 \uc0\u9660 
+\f1  , 10 = 
+\f4 \uc0\u9670 
+\f1 )\
+	
+\f0\b dotsize
+\f1\b0  : 
+\f2\i double
+\f1\i0  or 
+\f2\i double
+\f3\b s
+\f1\i0\b0  : size of dot (one value) or size of dot
+\f0\b s 
+\f1\b0 (same number of values as x and y). In points.\
+	
+\f0\b dotinterval
+\f1\b0  : 
+\f2\i integer
+\f1\i0  : number of omitted points (0 = one dot per point, 1 = one dot per two points, 2 = one dot per three points, etc\'85)\
+	
+\f0\b dotcolor
+\f1\b0  : 
+\f2\i color
+\f1\i0  or 
+\f2\i color
+\f3\b s
+\f1\i0\b0  <colorvec> : color of dot or color
+\f0\b s
+\f1\b0  of dot
+\f0\b s
+\f1\b0  (same length as x and y). \
+	
+\f0\b name
+\f1\b0  : 
+\f2\i string
+\f1\i0  : name used for the legend\
+	
+\f0\b xerror, yerror
+\f1\b0  : doubles : error bars for x and y-values (same length as x and y). \
+	
+\f0\b field
+\f1\b0  : 
+\f2\i field
+\f1\i0  : scalar or vectorial 2-D field (if field is specified, x and y may be omitted)\
+	
+\f0\b fcolor
+\f1\b0  : 
+\f2\i (color1,color2)
+\f1\i0  : extreme colors to draw the field (default = black and white)\
+	
+\f0\b fminmax
+\f1\b0  = 
+\f2\i (double1,double2)
+\f1\i0  : min and max values of y corresponding to the extreme colors\
+\
+
+\f0\b plot
+\f1\b0 ( 
+\f0\b $
+\f1\b0 (x ,y, [\'85]) , 
+\f0\b $
+\f1\b0 (x, y, [\'85]) , 
+\f0\b $
+\f1\b0 (x, y, [\'85])\'85) : multiple graphs\
+
+\f0\b \
+lineplot
+\f1\b0 () : identical to plot() but draws only lines, no dots\
+
+\f0\b scatterplot
+\f1\b0 () : identical to plot() but draws only dots, no lines\
+\
+
+\f0\b barplot
+\f1\b0 (
+\f0\b data
+\f1\b0  : 
+\f2\i matrix
+\f1\i0 , 
+\f0\b labels
+\f1\b0  : 
+\f2\i strings
+\f1\i0 , 
+\f0\b type
+\f1\b0  : string = \'91V\'92 or \'91H\'92, 
+\f0\b stacked
+\f1\b0  : 
+\f2\i bool 
+\f1\i0 = FALSE, 
+\f0\b colspace
+\f1\b0  : 
+\f2\i double 
+\f1\i0 = 0.0, 
+\f0\b space
+\f1\b0  : 
+\f2\i double 
+\f1\i0 = 0.7, 
+\f0\b names
+\f1\b0  : strings)\
+\
+
+\f0\b color
+\f1\b0 (
+\f0\b r
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0.5, 
+\f0\b g
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0.5 , 
+\f0\b b
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0.5, 
+\f0\b a
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0.5)\
+
+\f0\b color
+\f1\b0 (
+\f0\b name
+\f1\b0  : 
+\f2\i string 
+\f1\i0 ) Names : blue, red, orange, brown, green, yellow, gray ou grey, pink, teal, indigo, purple, black, white\
+
+\f0\b grey
+\f1\b0 (
+\f0\b level
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 )\
+
+\f0\b colors
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b start
+\f1\b0  : 
+\f2\i color 
+\f1\i0 = \cb7    \cb3 , 
+\f0\b end
+\f1\b0  : 
+\f2\i color = 
+\f1\i0 \cb8    \cb3 , [min : 
+\f2\i double
+\f1\i0 ], [max : 
+\f2\i double
+\f1\i0 ] )\
+
+\f0\b colors
+\f1\b0 (
+\f0\b x
+\f1\b0  : 
+\f2\i bools
+\f1\i0 , true : 
+\f2\i color 
+\f1\i0 = \cb7    \cb3 , false : 
+\f2\i color = 
+\f1\i0 \cb8    \cb3  )\
+\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 SCRIPTING AND CONTROL STRUCTURES
+\f1\b0 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+These keywords may be written in capitals or normal letters.\
+\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 RUN
+\f1\b0 (
+\f2\i string
+\f1\i0 ) : runs the script named 
+\f2\i string\
+
+\f0\i0\b DO
+\f1\b0 (
+\f2\i expression1, exp2, exp3, exp4\'85
+\f1\i0 ) : executes all the expressions\
+	if 
+\f2\i expression
+\f1\i0  is a variable containing an expression, that expression is executed.\
+	if expression is a string corresponding to the name of an expression , that expression is executed.\
+
+\f0\b IF
+\f1\b0 (
+\f2\i bool
+\f1\i0 , 
+\f2\i exp1
+\f1\i0 , 
+\f2\i exp2
+\f1\i0 ) : returns the result of 
+\f2\i expression1
+\f1\i0  or 
+\f2\i exp2
+\f1\i0  depending on the 
+\f2\i bool
+\f1\i0  value.\
+
+\f0\b FOR
+\f1\b0 (
+\f2\i variable
+\f1\i0 , 
+\f2\i sequence
+\f1\i0 , 
+\f2\i expression
+\f1\i0 ) : repeats 
+\f2\i expression
+\f1\i0  with 
+\f2\i variable
+\f1\i0  taking the successive values in 
+\f2\i sequence
+\f1\i0 \
+
+\f0\b WHILE
+\f1\b0 (
+\f2\i bool
+\f1\i0 , 
+\f2\i expression
+\f1\i0 ) : repeats 
+\f2\i expression
+\f1\i0  as long as 
+\f2\i bool
+\f1\i0  is TRUE\
+
+\f0\b FUNCTION
+\f1\b0 (
+\f2\i name
+\f1\i0 (
+\f2\i var1
+\f1\i0 , 
+\f2\i var2
+\f1\i0 , \'85),
+\f2\i expression
+\f1\i0 )  : defines a user-function (same as : 
+\f2\i name
+\f1\i0 (var1, var2,\'85) = 
+\f2\i expression 
+\f1\i0 )\
+\
+
+\f0\b Multiline syntaxes to use only in scripts : \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 IF
+\f1\b0 (
+\f2\i bool
+\f1\i0 ) \
+\'85\
+[
+\f0\b ELSE]\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2  \'85\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 ENDIF\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 	\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 FOR
+\f1\b0 (
+\f2\i variable
+\f1\i0 ,
+\f2\i sequence
+\f1\i0 ) \
+\'85\
+
+\f0\b NEXT\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f1\b0 \cf2 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 WHILE
+\f1\b0 (
+\f2\i bool
+\f1\i0 ) \
+\'85\
+
+\f0\b LOOP
+\f1\b0 \
+\
+
+\f0\b FUNCTION
+\f1\b0 (
+\f2\i name
+\f1\i0 (
+\f2\i var1
+\f1\i0 , 
+\f2\i var2
+\f1\i0 ,\'85))\
+\'85\
+[
+\f0\b RETURN
+\f1\b0 (
+\f2\i expression
+\f1\i0 )]\
+\'85\
+
+\f0\b RETURN
+\f1\b0 (
+\f2\i expression
+\f1\i0 )\
+
+\f0\b END
+\f1\b0 \
+\
+
+\f0\b break
+\f1\b0 ()  : stops execution a script (for debugging)\
+
+\f0\b $
+\f1\b0 (expressions) used to store lists of arguments\
+\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 SIMULATIONS
+\f1\b0 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 t()
+\f1\b0  or 
+\f0\b sim.t
+\f1\b0 () or 
+\f0\b world.t
+\f1\b0    :  returns the simulated time (not the real time !)\
+
+\f0\b population
+\f1\b0 (
+\f0\b pop
+\f1\b0  : 
+\f2\i string
+\f1\i0 , 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0 , [
+\f0\b field
+\f1\b0  = 
+\f2\i scalar field
+\f1\i0 ])  initialises a population\
+	Optional field (same dimensions as world) = spatial density probability\
+
+\f0\b populate
+\f1\b0 (
+\f0\b pop
+\f1\b0  : 
+\f2\i string
+\f1\i0 , 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0  , [
+\f0\b field
+\f1\b0  = 
+\f2\i scalar field
+\f1\i0 ])  : adds n individuals to an existing population\
+\
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 USER INTERFACE
+\f1\b0 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb1 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb3 label
+\f1\b0 (string : 
+\f2\i string
+\f1\i0 ) : shows the string without quotes. \
+	Shortcut to create a label : any text beginning with a space\
+
+\f0\b text
+\f1\b0 (string : 
+\f2\i string
+\f1\i0 ) : resizable and editable multiline textfield\
+
+\f0\b table
+\f1\b0 (
+\f2\i exp1
+\f1\i0 , 
+\f2\i exp2
+\f1\i0 , 
+\f2\i exp3
+\f1\i0 \'85) or 
+\f0\b table
+\f1\b0 (
+\f2\i dataframe
+\f1\i0 ) or 
+\f0\b table
+\f1\b0 (
+\f2\i matrix
+\f1\i0 )\
+
+\f0\b button
+\f1\b0 (script : 
+\f2\i string
+\f1\i0 , [label : 
+\f2\i string
+\f1\i0 ])\
+
+\f0\b checkbox
+\f1\b0 (var : 
+\f2\i variable
+\f1\i0 , [label : 
+\f2\i string
+\f1\i0 ], [script : 
+\f2\i exp
+\f1\i0 ] )\
+
+\f0\b popup
+\f1\b0 (var: 
+\f2\i variable
+\f1\i0 , items : 
+\f2\i strings
+\f1\i0 , [script : 
+\f2\i exp
+\f1\i0 ] ) : displays a popup menu\cf9 \
+
+\f0\b \cf2 slider
+\f1\b0 (var : 
+\f2\i variable
+\f1\i0 , [min : 
+\f2\i double
+\f1\i0  = 0], [max : 
+\f2\i double
+\f1\i0  = 1], [ticks : 
+\f2\i integer
+\f1\i0 ], [step : 
+\f2\i double
+\f1\i0 ] [script : 
+\f2\i exp
+\f1\i0 ] ) or 
+\f0\b hslider
+\f1\b0 ()\
+
+\f0\b vslider
+\f1\b0 , 
+\f0\b cslider
+\f1\b0  for vertical or circular sliders\
+
+\f0\b stepper
+\f1\b0 (
+\f0\b var
+\f1\b0 : 
+\f2\i variable
+\f1\i0 , 
+\f0\b min
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 0, 
+\f0\b max
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 100, 
+\f0\b step
+\f1\b0  : 
+\f2\i double
+\f1\i0  = 1.0, [
+\f0\b script
+\f1\b0  : 
+\f2\i exp
+\f1\i0 ],  [
+\f0\b label
+\f1\b0  : 
+\f2\i string
+\f1\i0 ], 
+\f0\b value
+\f1\b0  : bool = TRUE )\
+
+\f0\b image
+\f1\b0 () : dialog box that lets the user choose an image. \
+
+\f0\b print
+\f1\b0 (
+\f2\i exp1
+\f1\i0 , 
+\f2\i exp2
+\f1\i0 , 
+\f2\i exp3
+\f1\i0 \'85) : prints to the console.\
+
+\f0\b clearconsole
+\f1\b0 () or 
+\f0\b console
+\f1\b0 () : clears the console and displays it if necessary.\cf9 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 \cb4 DIFFERENTIAL CALCULATION
+\f1\b0 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+\cf2 \cb3 \
+\pard\tx385\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardeftab20\partightenfactor0
+
+\f0\b \cf2 deriv
+\f1\b0 ()
+\f0\b  or derivative
+\f1\b0 (
+\f0\b f
+\f1\b0 : expression, 
+\f0\b x
+\f1\b0  : 
+\f2\i expression
+\f1\i0  = x, [at : 
+\f2\i doubles
+\f1\i0 ], dx: 
+\f2\i double
+\f1\i0  = 0.000001 )\
+
+\f0\b integ
+\f1\b0 () or 
+\f0\b integral
+\f1\b0 (
+\f0\b f
+\f1\b0 : 
+\f2\i expression
+\f1\i0 , 
+\f0\b x
+\f1\b0 : 
+\f2\i expression
+\f1\i0  = x, [
+\f0\b from
+\f1\b0 : 
+\f2\i doubles
+\f1\i0 , 
+\f0\b to
+\f1\b0 : 
+\f2\i doubles
+\f1\i0 ], 
+\f0\b n
+\f1\b0  : 
+\f2\i integer
+\f1\i0  = 1000 \
+}
